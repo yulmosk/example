@@ -1,0 +1,48 @@
+//
+//  FirstViewController.swift
+//  ClickPay
+//
+//  Created by Yulia Moskaleva on 26/12/2018.
+//  Copyright © 2018 Yulia Moskaleva. All rights reserved.
+//
+
+import UIKit
+
+class MainController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
+    
+    var presenter: MainPresenter?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        tableView.tableFooterView = UIView()
+        MainRouter.createMainModule(viewController: self)
+       
+    }
+}
+
+extension MainController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "CardCell", for: indexPath) as! MakeTransferCell
+        cell.fill(index:indexPath.row)
+        cell.selectionStyle = .none
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return Constants.transferInfo.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        presenter?.showTransferForm(formIndex: indexPath.row, view: self)
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 160.0
+    }
+    
+}
+
+

@@ -1,0 +1,26 @@
+/* 
+  Localizable.strings
+  ClickPay
+
+  Created by Yulia Moskaleva on 27/12/2018.
+  Copyright © 2018 Yulia Moskaleva. All rights reserved.
+*/
+
+"Tab.Transfer" = "MAKE\nTRANSFER";
+"Tab.Cabinet" = "YOUR\nCABINET";
+"Tab.History" = "TRANSACTION'\nHISTORY";
+"Tab.Menu" = "MORE\nMENU";
+
+"Transfer.ToCard" = "EXPEDIAZA TRANSFERUL LA CARD";
+"Transfer.ToMobile" = "LA NUMARUL DE TELEFON MOBIL";
+"Transfer.ToEmail" = "LA ADRESA DE EMAIL";
+
+"Login" = "LOGIN";
+"Password" = "PASSWORD";
+
+"P2P.Error.SessionExpired" = "Expired session";
+"P2P.Transaction.Success" = "Transaction Success";
+"P2P.Transaction.Failed" = "Transaction Failed";
+
+"Popup.Action.Cancel" = "Cancel";
+"Popup.Action.Refresh" = "Refresh";
