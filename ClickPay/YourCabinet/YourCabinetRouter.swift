@@ -11,14 +11,6 @@ import UIKit
 
 class YourCabinetRouter {
     
-    func presentLogin(view: UIViewController){
-        let controller = LoginController.init()
-        controller.modalPresentationStyle = .overCurrentContext
-        view.navigationController?.tabBarController?.present(controller, animated: true, completion: nil)
-        
-        LoginRouter.createLoginModule(viewController: controller, tabsController: view.navigationController?.tabBarController)
-    }
-    
     class func createYourCabinetModule(viewController: YourCabinetController) {
         let presenter = YourCabinetPresenter()
         

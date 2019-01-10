@@ -11,18 +11,27 @@ import UIKit
 
 class LoginRouter {
     
-    func presentRegister(view: UIViewController,tabsView: UITabBarController?){
+    func openTab(index:Int, tabController: UITabBarController?)
+        {
+        tabController?.selectedIndex = index
+        tabController?.dismiss(animated: true, completion: nil)
+            
+    }
+    
+    func presentRegister(view: UIViewController,tabController: UITabBarController?,index:Int){
         
         let controller = RegisterController.init()
         controller.modalPresentationStyle = .overCurrentContext
-        tabsView?.present(controller, animated: false, completion: nil)
+        tabController?.present(controller, animated: false, completion: nil)
+        RegisterRouter.createRegisterModule(viewController: controller, tabsController: tabController, index:index)
         
     }
     
-    class func createLoginModule(viewController: LoginController, tabsController: UITabBarController?) {
+    class func createLoginModule(viewController: LoginController, tabsController: UITabBarController?,index:Int) {
         let presenter = LoginPresenter()
         
         viewController.presenter = presenter
+        viewController.tabIndex = index
         viewController.presenter?.router = LoginRouter()
         viewController.presenter?.view = viewController
         viewController.presenter?.tabsView = tabsController

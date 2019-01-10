@@ -14,7 +14,11 @@ class LoginPresenter {
     weak var view: LoginController?
     var tabsView: UITabBarController?
    
-    func showRegister(view:LoginController){
-        router?.presentRegister(view: view,tabsView:tabsView)
+    func showRegister(view:LoginController,index:Int){
+        router?.presentRegister(view: view,tabController:tabsView,index:index)
+    }
+    
+    func loginTapped(index:Int){
+        router?.openTab(index: index, tabController: tabsView)
     }
 }

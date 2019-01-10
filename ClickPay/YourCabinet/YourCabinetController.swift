@@ -17,11 +17,16 @@ class YourCabinetController: GradientViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         scrollView.delegate = self
         YourCabinetRouter.createYourCabinetModule(viewController: self)
-        presenter?.checkAuth(view: self)
+        //presenter?.checkAuth(view: self)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+    }
+    
+    override func viewDidLayoutSubviews() {
+        scrollView.translatesAutoresizingMaskIntoConstraints = true
+        scrollView.contentSize = CGSize(width: scrollView.frame.width, height: scrollView.contentSize.height)
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {

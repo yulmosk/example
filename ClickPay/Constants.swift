@@ -14,7 +14,8 @@ class Constants {
     
     static let transferInfo:[[String:String]] = [["image":"ToCard","title":"Transfer.ToCard"],["image":"ToMobile","title":"Transfer.ToMobile"],["image":"ToEmail","title":"Transfer.ToEmail"]]
     
-    static let forms = ["Card","Phone", "Email"]
+    static let forms = ["Card","Phone","Email"]
+    static let items = ["Main","Cabinet","History","Menu"]
     
     class func calculatedHeight() -> Int {
         var height = 68

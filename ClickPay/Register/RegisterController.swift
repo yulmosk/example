@@ -9,6 +9,9 @@
 import UIKit
 
 class RegisterController: UIViewController {
+    
+    var presenter: RegisterPresenter?
+    var tabIndex = 0
 
     let controllerNibName = "RegisterController"
     init() {
@@ -25,7 +28,7 @@ class RegisterController: UIViewController {
     }
 
     @IBAction func registerTapped(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        self.presenter?.registerTapped(index: self.tabIndex)
     }
     
 }

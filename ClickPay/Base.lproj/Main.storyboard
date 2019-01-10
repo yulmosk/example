@@ -121,11 +121,11 @@
                             <scrollView clipsSubviews="YES" contentMode="scaleAspectFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RPW-51-RfH">
                                 <rect key="frame" x="0.0" y="64" width="375" height="554"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Chopin" translatesAutoresizingMaskIntoConstraints="NO" id="BVA-AJ-UyJ" customClass="RoundedView" customModule="ClickPay" customModuleProvider="target">
-                                        <rect key="frame" x="137.5" y="13" width="100" height="100"/>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Userpic" translatesAutoresizingMaskIntoConstraints="NO" id="BVA-AJ-UyJ" customClass="RoundedView" customModule="ClickPay" customModuleProvider="target">
+                                        <rect key="frame" x="132.5" y="13" width="110" height="110"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="100" id="a3g-zW-nhi"/>
-                                            <constraint firstAttribute="height" constant="100" id="enk-Cc-rDA"/>
+                                            <constraint firstAttribute="width" constant="110" id="a3g-zW-nhi"/>
+                                            <constraint firstAttribute="width" secondItem="BVA-AJ-UyJ" secondAttribute="height" multiplier="1:1" id="x77-qp-E2p"/>
                                         </constraints>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
@@ -134,7 +134,7 @@
                                         </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="s3D-EH-uuQ" userLabel="Edit Profile Form">
-                                        <rect key="frame" x="52.5" y="126" width="270" height="350"/>
+                                        <rect key="frame" x="52.5" y="136" width="270" height="350"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="gg7-O8-AyB">
                                                 <rect key="frame" x="0.0" y="0.0" width="270" height="258"/>
@@ -246,26 +246,45 @@
             </objects>
             <point key="canvasLocation" x="1757.5999999999999" y="474.51274362818594"/>
         </scene>
-        <!--View Controller-->
+        <!--History Controller-->
         <scene sceneID="lyK-Wn-a8Z">
             <objects>
-                <viewController id="SgA-Bu-fMh" sceneMemberID="viewController">
+                <viewController id="SgA-Bu-fMh" customClass="HistoryController" customModule="ClickPay" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TSB-9J-Et1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.95686274509803926" green="0.95686274509803926" blue="0.96470588235294119" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="g6U-x8-HvW">
+                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="SgA-Bu-fMh" id="hcf-vx-i9R"/>
+                                    <outlet property="delegate" destination="SgA-Bu-fMh" id="JF3-3n-lzu"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="twC-IU-Ouh" firstAttribute="trailing" secondItem="g6U-x8-HvW" secondAttribute="trailing" id="7Pk-NF-3ke"/>
+                            <constraint firstItem="g6U-x8-HvW" firstAttribute="leading" secondItem="twC-IU-Ouh" secondAttribute="leading" id="C24-Tb-EBy"/>
+                            <constraint firstItem="twC-IU-Ouh" firstAttribute="bottom" secondItem="g6U-x8-HvW" secondAttribute="bottom" id="V58-kC-g4h"/>
+                            <constraint firstItem="g6U-x8-HvW" firstAttribute="top" secondItem="twC-IU-Ouh" secondAttribute="top" id="kz0-Cs-uOj"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="twC-IU-Ouh"/>
                     </view>
                     <navigationItem key="navigationItem" id="7XJ-3w-ljN"/>
+                    <connections>
+                        <outlet property="tableView" destination="g6U-x8-HvW" id="QEV-1g-h2Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aae-a6-jGf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2588" y="475"/>
         </scene>
-        <!--MENU-->
+        <!--Menu-->
         <scene sceneID="ph4-Mq-WrK">
             <objects>
-                <viewController id="HpZ-gb-18m" sceneMemberID="viewController">
+                <viewController title="Menu" id="HpZ-gb-18m" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nM2-7W-nFf">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -280,10 +299,10 @@
             </objects>
             <point key="canvasLocation" x="3423" y="475"/>
         </scene>
-        <!--Tab Bar Manager-->
+        <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" customClass="TabBarManager" customModule="ClickPay" customModuleProvider="target" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="TabBarController" customModule="ClickPay" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" itemPositioning="fill" id="W28-zg-YXA" customClass="TabBar" customModule="ClickPay" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
@@ -309,10 +328,10 @@
             </objects>
             <point key="canvasLocation" x="0.0" y="0.0"/>
         </scene>
-        <!--TRANSFER-->
+        <!--Main-->
         <scene sceneID="reB-zo-O6s">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TAN-40-OpU" sceneMemberID="viewController">
+                <navigationController title="Main" automaticallyAdjustsScrollViewInsets="NO" id="TAN-40-OpU" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="TRANSFER" image="MakeTransfer" id="acW-dT-cKf">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-7"/>
                     </tabBarItem>
@@ -330,10 +349,10 @@
             </objects>
             <point key="canvasLocation" x="999" y="-233"/>
         </scene>
-        <!--CABINET-->
+        <!--Cabinet-->
         <scene sceneID="nsa-XR-SF1">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="9qi-PB-PUK" sceneMemberID="viewController">
+                <navigationController title="Cabinet" automaticallyAdjustsScrollViewInsets="NO" id="9qi-PB-PUK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="CABINET" image="YourCabinet" id="cPa-gy-q4n">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-7"/>
                     </tabBarItem>
@@ -351,10 +370,10 @@
             </objects>
             <point key="canvasLocation" x="1758" y="-233"/>
         </scene>
-        <!--HISTORY-->
+        <!--History-->
         <scene sceneID="xRb-0E-fws">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Ow-cD-ovK" sceneMemberID="viewController">
+                <navigationController title="History" automaticallyAdjustsScrollViewInsets="NO" id="7Ow-cD-ovK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="HISTORY" image="TransHistory" id="NhY-XC-lGf">
                         <offsetWrapper key="titlePositionAdjustment" horizontal="0.0" vertical="-7"/>
                     </tabBarItem>
@@ -374,12 +393,12 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Chopin" width="44" height="44"/>
         <image name="MainBg" width="540" height="960"/>
         <image name="MakeTransfer" width="37" height="42"/>
         <image name="MoreMenu" width="37" height="42"/>
         <image name="ToCard" width="183" height="103"/>
         <image name="TransHistory" width="37" height="42"/>
+        <image name="Userpic" width="200" height="200"/>
         <image name="YourCabinet" width="37" height="42"/>
     </resources>
 </document>

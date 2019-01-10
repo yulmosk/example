@@ -11,6 +11,7 @@ import UIKit
 class LoginController: UIViewController {
     
     var presenter: LoginPresenter?
+    var tabIndex = 0
     
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -31,12 +32,12 @@ class LoginController: UIViewController {
     }
     
     @IBAction func loginTapped(_ sender: UIButton) {
-        dismiss(animated: true, completion: nil)
+        self.presenter?.loginTapped(index: self.tabIndex)
     }
     
     @IBAction func registerTapped(_ sender: UIButton) {
         dismiss(animated: false, completion: {
-            self.presenter?.showRegister(view:self)
+            self.presenter?.showRegister(view:self,index: self.tabIndex)
         })
     }
     

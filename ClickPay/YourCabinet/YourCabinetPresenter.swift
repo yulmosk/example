@@ -13,9 +13,5 @@ class YourCabinetPresenter {
     var router: YourCabinetRouter?
     weak var view: YourCabinetController?
     
-    func checkAuth(view: UIViewController){
-        router?.presentLogin(view: view)
-    }
-    
     
 }
