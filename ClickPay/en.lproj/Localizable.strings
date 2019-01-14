@@ -24,3 +24,9 @@
 
 "Popup.Action.Cancel" = "Cancel";
 "Popup.Action.Refresh" = "Refresh";
+
+"Menu.About" = "ABOUT";
+"Menu.Cards" = "CARDS";
+"Menu.Security" = "SECURITY";
+"Menu.Contact" = "CONTACT";
+"Menu.Settings" = "SETTINGS";

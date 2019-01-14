@@ -15,8 +15,6 @@ class TabBarRouter {
         let controller = LoginController.init()
         controller.modalPresentationStyle = .overCurrentContext
         tabController?.present(controller, animated: true, completion: nil)
-       
-        //view.navigationController?.tabBarController?.present(controller, animated: true, completion: nil)
         
         LoginRouter.createLoginModule(viewController: controller, tabsController: tabController, index:index)
     }
@@ -24,6 +22,12 @@ class TabBarRouter {
     
     func goToTab(index:Int, tabController: UITabBarController?){
         tabController?.selectedIndex = index
+    }
+    
+    func openMenu(index:Int, tabController: UITabBarController?){
+        let controller = MenuController.init()
+        controller.modalPresentationStyle = .overCurrentContext
+        tabController?.present(controller, animated: false, completion: nil)
     }
     
     class func createTabBarModule(tabController: TabBarController) {

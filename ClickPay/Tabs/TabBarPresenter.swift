@@ -21,7 +21,15 @@ class TabBarPresenter {
             router?.goToLogin(index:index,tabController: tabController)
         default:
             //Так как пользователь залогинен открываем tab
-            router?.goToTab(index:index,tabController: tabController)
+            switch index {
+                case 1,2:
+                    router?.goToTab(index:index,tabController: tabController)
+                case 3:
+                    router?.openMenu(index:index,tabController: tabController)
+                default:
+                    print("Навигация")
+            }
+            
         }
     }
 }

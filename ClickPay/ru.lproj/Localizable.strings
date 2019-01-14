@@ -24,3 +24,9 @@
 
 "Popup.Action.Cancel" = "Отмена";
 "Popup.Action.Refresh" = "Обновить";
+
+"Menu.About" = "О ПРОЕКТЕ";
+"Menu.Cards" = "КАРТЫ";
+"Menu.Security" = "БЕЗОПАСНОСТЬ";
+"Menu.Contact" = "КОНТАКТ";
+"Menu.Settings" = "НАСТРОЙКИ";

@@ -21,10 +21,17 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         //Смотрим куда идем, если это Cabinet, History, Menu, то делаем предварительную проверку на автризацию пользователя
         if let title = viewController.title, let index = Constants.items.index(of: title){
             switch index {
-                case 1...3:
+                case 1...2:
+                    selectedViewController?.dismiss(animated: false, completion: nil)
                     presenter?.checkAuth(index: index, tabController: self) 
                     return false
+                case 3:
+                    let controller = MenuController.init()
+                    controller.modalPresentationStyle = .overCurrentContext
+                    selectedViewController?.present(controller, animated: false, completion: nil)
+                return false
                 default:
+                    selectedViewController?.dismiss(animated: false, completion: nil)
                     return true
             }
         }

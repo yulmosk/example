@@ -24,3 +24,9 @@
 
 "Popup.Action.Cancel" = "Cancel";
 "Popup.Action.Refresh" = "Refresh";
+
+"Menu.About" = "DESPRE PROIECT";
+"Menu.Cards" = "CARDS";
+"Menu.Security" = "SECURITATE";
+"Menu.Contact" = "CONTACTE";
+"Menu.Settings" = "SETARI";

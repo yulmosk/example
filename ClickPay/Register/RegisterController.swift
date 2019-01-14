@@ -9,6 +9,7 @@
 import UIKit
 
 class RegisterController: UIViewController {
+    @IBOutlet weak var userFields: UIView!
     
     var presenter: RegisterPresenter?
     var tabIndex = 0
@@ -23,8 +24,11 @@ class RegisterController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
        
+    }
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
     }
 
     @IBAction func registerTapped(_ sender: UIButton) {

@@ -16,6 +16,11 @@ class Constants {
     
     static let forms = ["Card","Phone","Email"]
     static let items = ["Main","Cabinet","History","Menu"]
+    static let menuWidth = CGFloat(220.0)
+    
+    static let menuInfo:[[String:String]] = [["image":"About","title":"Menu.About"],["image":"Cards","title":"Menu.Cards"],["image":"Security","title":"Menu.Security"],
+        ["image":"Contact","title":"Menu.Contact"],
+        ["image":"Settings","title":"Menu.Settings"]]
     
     class func calculatedHeight() -> Int {
         var height = 68
@@ -23,6 +28,14 @@ class Constants {
             height += 40
         }
         return height
+    }
+    
+    class func calculatedTopMenu() -> CGFloat {
+        var top = 10
+        if Constants.heightIPhoneX.contains(UIScreen.main.nativeBounds.height)  {
+            top += 40
+        }
+        return CGFloat(top)
     }
     
     class func getLang() -> String{
