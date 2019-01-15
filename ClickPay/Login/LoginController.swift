@@ -39,7 +39,7 @@ class LoginController: UIViewController {
     }
     
     @IBAction func registerTapped(_ sender: UIButton) {
-        dismiss(animated: false, completion: {
+        dismiss(animated: true, completion: {
             self.presenter?.showRegister(view:self,index: self.tabIndex)
         })
     }

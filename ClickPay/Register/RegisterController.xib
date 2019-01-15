@@ -12,7 +12,16 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RegistreController" customModule="ClickPay" customModuleProvider="target">
             <connections>
-                <outlet property="userFields" destination="QMT-Pm-Q54" id="3g5-T5-9gO"/>
+                <outlet property="capchaBtn" destination="pbU-k2-Glm" id="bg7-xB-nuS"/>
+                <outlet property="capchaField" destination="l8a-lc-HVD" id="Tw3-Ca-Xhn"/>
+                <outlet property="capchaLbl" destination="qYa-2g-ycu" id="jFy-TM-bfq"/>
+                <outlet property="emailField" destination="c4a-dX-Bqw" id="4SN-5p-Sjh"/>
+                <outlet property="nameField" destination="TLc-NW-alI" id="v4s-wZ-9RI"/>
+                <outlet property="passwordField" destination="Q1k-TY-igH" id="bhF-fX-dbl"/>
+                <outlet property="phoneField" destination="Klb-ok-d1H" id="pn9-g9-5xe"/>
+                <outlet property="repeatField" destination="b79-4L-7gz" id="8xo-dz-n0E"/>
+                <outlet property="scrollView" destination="58e-1n-il6" id="Pjn-cd-KNe"/>
+                <outlet property="surnameField" destination="whN-cl-Lnq" id="RvQ-SW-0Pi"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -40,14 +49,14 @@
                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="6Hh-yS-vSZ">
                                             <rect key="frame" x="0.0" y="0.0" width="315" height="345"/>
                                             <subviews>
-                                                <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLc-NW-alI" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
+                                                <textField opaque="NO" alpha="0.80000001192092896" tag="100" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="TLc-NW-alI" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="sl4-EG-72m"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="4"/>
@@ -74,15 +83,18 @@
                                                             <color key="value" cocoaTouchSystemColor="darkTextColor"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="aP9-xS-r6d"/>
+                                                    </connections>
                                                 </textField>
-                                                <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SURNAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whN-cl-Lnq" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
+                                                <textField opaque="NO" alpha="0.80000001192092896" tag="101" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SURNAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="whN-cl-Lnq" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="59" width="315" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="R12-sM-2Au"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="4"/>
@@ -106,15 +118,18 @@
                                                             <color key="value" cocoaTouchSystemColor="darkTextColor"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="dCZ-Sb-Wlg"/>
+                                                    </connections>
                                                 </textField>
-                                                <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+373 69521132" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Klb-ok-d1H" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
+                                                <textField opaque="NO" alpha="0.80000001192092896" tag="102" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+373 69521132" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Klb-ok-d1H" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="118" width="315" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="UaV-yY-X8I"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="4"/>
@@ -138,15 +153,18 @@
                                                             <color key="value" cocoaTouchSystemColor="darkTextColor"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="ikc-Lt-QOE"/>
+                                                    </connections>
                                                 </textField>
-                                                <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c4a-dX-Bqw" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
+                                                <textField opaque="NO" alpha="0.80000001192092896" tag="103" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="EMAIL" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c4a-dX-Bqw" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="177" width="315" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="JoY-yE-j3w"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="4"/>
@@ -170,15 +188,18 @@
                                                             <color key="value" cocoaTouchSystemColor="darkTextColor"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="gC1-7d-kp8"/>
+                                                    </connections>
                                                 </textField>
-                                                <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="RASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q1k-TY-igH" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
+                                                <textField opaque="NO" alpha="0.80000001192092896" tag="104" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="RASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Q1k-TY-igH" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="236" width="315" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="3jo-Ca-52F"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="4"/>
@@ -202,15 +223,18 @@
                                                             <color key="value" cocoaTouchSystemColor="darkTextColor"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="YcC-qT-EyL"/>
+                                                    </connections>
                                                 </textField>
-                                                <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="REPEAT RASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b79-4L-7gz" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
+                                                <textField opaque="NO" alpha="0.80000001192092896" tag="105" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="REPEAT RASSWORD" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="b79-4L-7gz" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
                                                     <rect key="frame" x="0.0" y="295" width="315" height="50"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="qyP-x3-RC5"/>
                                                     </constraints>
                                                     <nil key="textColor"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                                     <userDefinedRuntimeAttributes>
                                                         <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                             <real key="value" value="4"/>
@@ -234,6 +258,9 @@
                                                             <color key="value" cocoaTouchSystemColor="darkTextColor"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="sIO-YZ-YdC"/>
+                                                    </connections>
                                                 </textField>
                                             </subviews>
                                         </stackView>
@@ -249,7 +276,7 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nNq-1c-3Ha" userLabel="Capcha">
                                     <rect key="frame" x="30" y="470" width="315" height="70"/>
                                     <subviews>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="53246" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l8a-lc-HVD" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
+                                        <textField opaque="NO" tag="106" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="53246" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="l8a-lc-HVD" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
                                             <rect key="frame" x="90" y="10" width="80" height="50"/>
                                             <constraints>
                                                 <constraint firstAttribute="height" constant="50" id="BVS-i4-pEJ"/>
@@ -257,7 +284,7 @@
                                             </constraints>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="4"/>
@@ -275,35 +302,42 @@
                                                     <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="A5K-SL-DnO"/>
+                                            </connections>
                                         </textField>
-                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="53246" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6qk-44-Xw9" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g2P-Ek-nyf" customClass="CapchaLabel" customModule="ClickPay" customModuleProvider="target">
                                             <rect key="frame" x="190" y="10" width="80" height="50"/>
                                             <color key="backgroundColor" red="0.73725490199999999" green="0.13725490200000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="50" id="gKd-Cn-GEO"/>
-                                                <constraint firstAttribute="width" constant="80" id="lRs-tb-SVL"/>
+                                                <constraint firstAttribute="width" constant="80" id="ilL-IC-8Qg"/>
+                                                <constraint firstAttribute="height" constant="50" id="sV4-QH-Hr3"/>
                                             </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
-                                            <textInputTraits key="textInputTraits"/>
+                                            <nil key="highlightedColor"/>
                                             <userDefinedRuntimeAttributes>
                                                 <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                     <real key="value" value="4"/>
                                                 </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                                                    <real key="value" value="0.5"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
-                                                    <real key="value" value="4.2999999999999998"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
-                                                    <real key="value" value="0.10000000000000001"/>
-                                                </userDefinedRuntimeAttribute>
-                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                                                    <color key="value" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12345" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qYa-2g-ycu">
+                                            <rect key="frame" x="190" y="10" width="80" height="50"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="80" id="Hgw-CE-QAK"/>
+                                                <constraint firstAttribute="height" constant="50" id="hZ2-WY-dZo"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="4"/>
                                                 </userDefinedRuntimeAttribute>
                                             </userDefinedRuntimeAttributes>
-                                        </textField>
+                                        </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pbU-k2-Glm" userLabel="Refresh">
                                             <rect key="frame" x="280" y="17.5" width="35" height="35"/>
                                             <constraints>
@@ -316,12 +350,17 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
                                         <constraint firstItem="l8a-lc-HVD" firstAttribute="centerY" secondItem="nNq-1c-3Ha" secondAttribute="centerY" id="0hY-OA-CTL"/>
-                                        <constraint firstItem="6qk-44-Xw9" firstAttribute="leading" secondItem="l8a-lc-HVD" secondAttribute="trailing" constant="20" id="3yS-b8-0HG"/>
-                                        <constraint firstItem="pbU-k2-Glm" firstAttribute="leading" secondItem="6qk-44-Xw9" secondAttribute="trailing" constant="10" id="Acv-qf-he4"/>
+                                        <constraint firstItem="qYa-2g-ycu" firstAttribute="leading" secondItem="g2P-Ek-nyf" secondAttribute="leading" id="3cJ-0C-WrU"/>
+                                        <constraint firstItem="g2P-Ek-nyf" firstAttribute="leading" secondItem="l8a-lc-HVD" secondAttribute="trailing" constant="20" id="AIt-sr-Fpf"/>
                                         <constraint firstItem="pbU-k2-Glm" firstAttribute="centerY" secondItem="nNq-1c-3Ha" secondAttribute="centerY" id="Cda-yM-AjH"/>
+                                        <constraint firstItem="g2P-Ek-nyf" firstAttribute="centerY" secondItem="nNq-1c-3Ha" secondAttribute="centerY" id="THp-08-4QC"/>
                                         <constraint firstAttribute="height" constant="70" id="Txr-zq-3jT"/>
-                                        <constraint firstItem="6qk-44-Xw9" firstAttribute="centerY" secondItem="nNq-1c-3Ha" secondAttribute="centerY" id="WfW-Lv-mZI"/>
                                         <constraint firstAttribute="trailing" secondItem="pbU-k2-Glm" secondAttribute="trailing" id="Zk5-QM-Aa4"/>
+                                        <constraint firstItem="pbU-k2-Glm" firstAttribute="leading" secondItem="g2P-Ek-nyf" secondAttribute="trailing" constant="10" id="e2U-O7-rq3"/>
+                                        <constraint firstItem="qYa-2g-ycu" firstAttribute="centerY" secondItem="nNq-1c-3Ha" secondAttribute="centerY" id="in0-mR-Xil"/>
+                                        <constraint firstItem="qYa-2g-ycu" firstAttribute="trailing" secondItem="g2P-Ek-nyf" secondAttribute="trailing" id="j0m-Gl-YjW"/>
+                                        <constraint firstItem="qYa-2g-ycu" firstAttribute="height" secondItem="g2P-Ek-nyf" secondAttribute="height" id="ksq-xh-nAU"/>
+                                        <constraint firstItem="qYa-2g-ycu" firstAttribute="width" secondItem="g2P-Ek-nyf" secondAttribute="width" id="wEt-w6-jj0"/>
                                     </constraints>
                                 </view>
                                 <button autoresizesSubviews="NO" opaque="NO" alpha="0.89999997615814209" contentMode="center" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ODX-Ci-XcA" customClass="FormButton" customModule="ClickPay" customModuleProvider="target">
@@ -344,6 +383,9 @@
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" red="0.73725490199999999" green="0.13725490200000001" blue="0.62745098040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </state>
+                                    <connections>
+                                        <action selector="cancelTapped:" destination="-1" eventType="touchUpInside" id="4oJ-D7-IlJ"/>
+                                    </connections>
                                 </button>
                                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="s9R-Tw-IvN" userLabel="Register Link">
                                     <rect key="frame" x="118" y="650" width="139.5" height="27"/>

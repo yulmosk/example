@@ -18,7 +18,7 @@ extension TransferController {
         
         case let response where response.contains("rc="):
             let success = response.contains("rc=00")
-            let message = success ? "P2P.Transaction.Success" : "P2P.Transaction.Failed"
+            let message = success ? "P2P.Transaction.Success".localized : "P2P.Transaction.Failed".localized
             showInfo(message: message, bottomTitle: "OK"){ [weak self] in
                 self?.goBack()
             }

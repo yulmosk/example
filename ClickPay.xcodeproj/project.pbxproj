@@ -15,6 +15,8 @@
 		8D3E281A21EB84E2007C7144 /* MenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E281821EB84E2007C7144 /* MenuViewCell.xib */; };
 		8D48C34B21ED8FFB00D0E097 /* LoginTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48C34A21ED8FFB00D0E097 /* LoginTextFields.swift */; };
 		8D48C34D21EDD03D00D0E097 /* FormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48C34C21EDD03D00D0E097 /* FormButton.swift */; };
+		8D48C34F21EE098E00D0E097 /* RegisterFieldsLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48C34E21EE098E00D0E097 /* RegisterFieldsLogic.swift */; };
+		8D48C35321EE487F00D0E097 /* CapchaLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48C35221EE487F00D0E097 /* CapchaLabel.swift */; };
 		8D61659621D68B9400101F22 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D61659521D68B9400101F22 /* Constants.swift */; };
 		8D61659921D6A64B00101F22 /* UIView+Corners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D61659821D6A64B00101F22 /* UIView+Corners.swift */; };
 		8D61659B21D6A6AD00101F22 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D61659A21D6A6AD00101F22 /* CardView.swift */; };
@@ -74,6 +76,8 @@
 		8D3E281821EB84E2007C7144 /* MenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewCell.xib; sourceTree = "<group>"; };
 		8D48C34A21ED8FFB00D0E097 /* LoginTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFields.swift; sourceTree = "<group>"; };
 		8D48C34C21EDD03D00D0E097 /* FormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButton.swift; sourceTree = "<group>"; };
+		8D48C34E21EE098E00D0E097 /* RegisterFieldsLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFieldsLogic.swift; sourceTree = "<group>"; };
+		8D48C35221EE487F00D0E097 /* CapchaLabel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapchaLabel.swift; sourceTree = "<group>"; };
 		8D61659521D68B9400101F22 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8D61659821D6A64B00101F22 /* UIView+Corners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corners.swift"; sourceTree = "<group>"; };
 		8D61659A21D6A6AD00101F22 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -268,6 +272,8 @@
 			isa = PBXGroup;
 			children = (
 				8D2D7ED521EBBCA200B5E34A /* RegisterField.swift */,
+				8D48C34E21EE098E00D0E097 /* RegisterFieldsLogic.swift */,
+				8D48C35221EE487F00D0E097 /* CapchaLabel.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -543,7 +549,9 @@
 				8D9C7D6321E6669300B42B92 /* HistoryHeader.swift in Sources */,
 				8D8D51B121ECBAEB009EF6F3 /* UITextField+Placeholder.swift in Sources */,
 				8D61659921D6A64B00101F22 /* UIView+Corners.swift in Sources */,
+				8D48C34F21EE098E00D0E097 /* RegisterFieldsLogic.swift in Sources */,
 				8D48C34D21EDD03D00D0E097 /* FormButton.swift in Sources */,
+				8D48C35321EE487F00D0E097 /* CapchaLabel.swift in Sources */,
 				8D9C7D6621E7AF0400B42B92 /* TabBarPresenter.swift in Sources */,
 				8D91B1E321D368C400CAC478 /* AppDelegate.swift in Sources */,
 				8D91B1E521D368C400CAC478 /* MainController.swift in Sources */,

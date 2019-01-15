@@ -25,8 +25,6 @@ extension LoginController: UITextFieldDelegate {
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardDidHide), name: UIResponder.keyboardWillHideNotification , object: nil)
         let tap = UITapGestureRecognizer(target: self, action: #selector(closeKeyboard))
         view.addGestureRecognizer(tap)
-        
-        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

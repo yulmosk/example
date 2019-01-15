@@ -22,7 +22,7 @@ class LoginRouter {
         
         let controller = RegisterController.init()
         controller.modalPresentationStyle = .overCurrentContext
-        tabController?.present(controller, animated: false, completion: nil)
+        tabController?.present(controller, animated: true, completion: nil)
         RegisterRouter.createRegisterModule(viewController: controller, tabsController: tabController, index:index)
         
     }
