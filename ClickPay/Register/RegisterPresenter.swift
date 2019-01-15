@@ -14,6 +14,7 @@ class RegisterPresenter {
     weak var view: RegisterController?
     var tabsView: UITabBarController?
     
+    
     func registerTapped(index:Int){
         router?.openTab(index: index, tabController: tabsView)
     }

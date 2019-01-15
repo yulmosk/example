@@ -12,7 +12,11 @@ class LoginController: UIViewController {
     
     var presenter: LoginPresenter?
     var tabIndex = 0
+    var moved = false
+    var keyboardShift:CGFloat = 0
     
+    @IBOutlet weak var checkLine: NSLayoutConstraint!
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var loginTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
@@ -26,11 +30,10 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginTextField.setLeftIcon(imageName: "Login", placeholder: NSLocalizedString("Login", comment: ""))
-        passwordTextField.setLeftIcon(imageName: "Password", placeholder: NSLocalizedString("Password", comment: ""))
-        passwordTextField.isSecureTextEntry = true
+        loginFieldsSetUp()
     }
     
+        
     @IBAction func loginTapped(_ sender: UIButton) {
         self.presenter?.loginTapped(index: self.tabIndex)
     }

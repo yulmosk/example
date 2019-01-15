@@ -13,6 +13,8 @@
 		8D2D7ED621EBBCA200B5E34A /* RegisterField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2D7ED521EBBCA200B5E34A /* RegisterField.swift */; };
 		8D3E281921EB84E2007C7144 /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E281721EB84E2007C7144 /* MenuViewCell.swift */; };
 		8D3E281A21EB84E2007C7144 /* MenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E281821EB84E2007C7144 /* MenuViewCell.xib */; };
+		8D48C34B21ED8FFB00D0E097 /* LoginTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48C34A21ED8FFB00D0E097 /* LoginTextFields.swift */; };
+		8D48C34D21EDD03D00D0E097 /* FormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48C34C21EDD03D00D0E097 /* FormButton.swift */; };
 		8D61659621D68B9400101F22 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D61659521D68B9400101F22 /* Constants.swift */; };
 		8D61659921D6A64B00101F22 /* UIView+Corners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D61659821D6A64B00101F22 /* UIView+Corners.swift */; };
 		8D61659B21D6A6AD00101F22 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D61659A21D6A6AD00101F22 /* CardView.swift */; };
@@ -28,7 +30,6 @@
 		8D87B3FD21D79B2000F2FCFD /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87B3FC21D79B2000F2FCFD /* MainRouter.swift */; };
 		8D87B40421DB7AAB00F2FCFD /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87B40221DB7AAB00F2FCFD /* LoginController.swift */; };
 		8D87B40521DB7AAB00F2FCFD /* LoginController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D87B40321DB7AAB00F2FCFD /* LoginController.xib */; };
-		8D87B40721DB827200F2FCFD /* FormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87B40621DB827200F2FCFD /* FormButton.swift */; };
 		8D87B40921DB871700F2FCFD /* UITextField+Icon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87B40821DB871700F2FCFD /* UITextField+Icon.swift */; };
 		8D87B40E21DBAF6200F2FCFD /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87B40C21DBAF6200F2FCFD /* RegisterController.swift */; };
 		8D87B40F21DBAF6200F2FCFD /* RegisterController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D87B40D21DBAF6200F2FCFD /* RegisterController.xib */; };
@@ -71,6 +72,8 @@
 		8D2D7ED521EBBCA200B5E34A /* RegisterField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterField.swift; sourceTree = "<group>"; };
 		8D3E281721EB84E2007C7144 /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
 		8D3E281821EB84E2007C7144 /* MenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewCell.xib; sourceTree = "<group>"; };
+		8D48C34A21ED8FFB00D0E097 /* LoginTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFields.swift; sourceTree = "<group>"; };
+		8D48C34C21EDD03D00D0E097 /* FormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButton.swift; sourceTree = "<group>"; };
 		8D61659521D68B9400101F22 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		8D61659821D6A64B00101F22 /* UIView+Corners.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Corners.swift"; sourceTree = "<group>"; };
 		8D61659A21D6A6AD00101F22 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
@@ -86,7 +89,6 @@
 		8D87B3FC21D79B2000F2FCFD /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
 		8D87B40221DB7AAB00F2FCFD /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		8D87B40321DB7AAB00F2FCFD /* LoginController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginController.xib; sourceTree = "<group>"; };
-		8D87B40621DB827200F2FCFD /* FormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButton.swift; sourceTree = "<group>"; };
 		8D87B40821DB871700F2FCFD /* UITextField+Icon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Icon.swift"; sourceTree = "<group>"; };
 		8D87B40C21DBAF6200F2FCFD /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		8D87B40D21DBAF6200F2FCFD /* RegisterController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RegisterController.xib; sourceTree = "<group>"; };
@@ -244,7 +246,8 @@
 		8D87B40121DB7A8200F2FCFD /* View */ = {
 			isa = PBXGroup;
 			children = (
-				8D87B40621DB827200F2FCFD /* FormButton.swift */,
+				8D48C34A21ED8FFB00D0E097 /* LoginTextFields.swift */,
+				8D48C34C21EDD03D00D0E097 /* FormButton.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -532,6 +535,7 @@
 				8D0325D721E4F175001B6979 /* UIColor+AppColors.swift in Sources */,
 				8D61659D21D6B35F00101F22 /* MakeTransferCell.swift in Sources */,
 				8D9C7D6C21E7E27300B42B92 /* RegisterPresenter.swift in Sources */,
+				8D48C34B21ED8FFB00D0E097 /* LoginTextFields.swift in Sources */,
 				8D87B3FD21D79B2000F2FCFD /* MainRouter.swift in Sources */,
 				8D9C7D6A21E7E25600B42B92 /* RegisterRouter.swift in Sources */,
 				8D2D7ED621EBBCA200B5E34A /* RegisterField.swift in Sources */,
@@ -539,6 +543,7 @@
 				8D9C7D6321E6669300B42B92 /* HistoryHeader.swift in Sources */,
 				8D8D51B121ECBAEB009EF6F3 /* UITextField+Placeholder.swift in Sources */,
 				8D61659921D6A64B00101F22 /* UIView+Corners.swift in Sources */,
+				8D48C34D21EDD03D00D0E097 /* FormButton.swift in Sources */,
 				8D9C7D6621E7AF0400B42B92 /* TabBarPresenter.swift in Sources */,
 				8D91B1E321D368C400CAC478 /* AppDelegate.swift in Sources */,
 				8D91B1E521D368C400CAC478 /* MainController.swift in Sources */,
@@ -558,7 +563,6 @@
 				8D87B3F521D7982F00F2FCFD /* TransferController.swift in Sources */,
 				8D87B40921DB871700F2FCFD /* UITextField+Icon.swift in Sources */,
 				8D6E32F621DD3FFD00D5CFC7 /* Parsing.swift in Sources */,
-				8D87B40721DB827200F2FCFD /* FormButton.swift in Sources */,
 				8D61659621D68B9400101F22 /* Constants.swift in Sources */,
 				8D92F3F321E9EB3E00360E22 /* MenuController.swift in Sources */,
 				8D87B40421DB7AAB00F2FCFD /* LoginController.swift in Sources */,

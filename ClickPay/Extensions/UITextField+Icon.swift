@@ -18,7 +18,7 @@ extension UITextField {
         imageView.frame = CGRect(x: 12, y: 13, width: 24, height: 24)
         self.addSubview(imageView)
         let leftView = UIView()
-        leftView.frame = CGRect(x:12, y:0,width: 38,height: 50)
+        leftView.frame = CGRect(x:12, y:0,width: 38,height:48)
         self.leftView = leftView;
         self.leftViewMode = .always
         self.placeholder = placeholder

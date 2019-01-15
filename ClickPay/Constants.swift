@@ -24,7 +24,7 @@ class Constants {
     
     class func calculatedHeight() -> Int {
         var height = 68
-        if Constants.heightIPhoneX.contains(UIScreen.main.nativeBounds.height)  {
+        if Constants.heightIPhoneX.contains(UIScreen.main.nativeBounds.height) || UIScreen.main.nativeBounds.height > 2000 {
             height += 40
         }
         return height
@@ -43,6 +43,14 @@ class Constants {
             return lang
         }
         return "ro"
+    }
+    
+    class func calculateKeyboardLoginShift(checkLine:CGFloat, keyboardHeight: CGFloat) -> CGFloat{
+        let delta = UIScreen.main.bounds.height - checkLine
+        if keyboardHeight > delta {
+            return keyboardHeight - delta
+        }
+     return 0.0
     }
     
     static let heightIPhoneX:Set<CGFloat> = [1792,2436,2688]
