@@ -13,6 +13,10 @@ extension UIColor {
         return UIColor(rgb: 0x95238d)
     }
     
+    class func secondary() -> UIColor {
+        return UIColor(rgb: 0xee6936)
+    }
+    
     class func pink() -> UIColor {
         return UIColor(rgb: 0xbc23a0)
     }

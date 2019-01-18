@@ -13,10 +13,19 @@ class YourCabinetController: GradientViewController, UIScrollViewDelegate {
     var presenter: YourCabinetPresenter?
     @IBOutlet weak var scrollView: UIScrollView!
     
+    @IBOutlet weak var nameField: RegisterField!
+    @IBOutlet weak var phoneField: RegisterField!
+    @IBOutlet weak var emailField: RegisterField!    
+    @IBOutlet weak var passwordField: RegisterField!
+    
+     var fields = [UITextField]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.delegate = self
         YourCabinetRouter.createYourCabinetModule(viewController: self)
+        showCardBarItem(true)
+        editFieldsSetUp()
         //presenter?.checkAuth(view: self)
     }
     

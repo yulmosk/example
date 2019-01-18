@@ -13,12 +13,18 @@ class LoginPresenter {
     var router: LoginRouter?
     weak var view: LoginController?
     var tabsView: UITabBarController?
+    var selectedViewController: UIViewController?
    
     func showRegister(view:LoginController,index:Int){
-        router?.presentRegister(view: view,tabController:tabsView,index:index)
+        router?.presentRegister(view: view,tabController:tabsView,index:index,selectedViewController:selectedViewController)
     }
     
     func loginTapped(index:Int){
-        router?.openTab(index: index, tabController: tabsView)
+        Auth.shared.saveTicket(ticket: "abc")
+        if(index == 3){
+             router?.openMenu(index:index, tabController: tabsView, selectedViewController: selectedViewController)
+        } else {
+             router?.openTab(index: index, tabController: tabsView)
+        }
     }
 }

@@ -11,7 +11,7 @@ import AEXML
 import WebKit
 import SafariServices
 
-class TransferController: UIViewController, URLSessionDelegate,URLSessionDataDelegate {
+class TransferController: BaseController, URLSessionDelegate,URLSessionDataDelegate {
    
     var formIndex = 0
     
@@ -66,16 +66,17 @@ class TransferController: UIViewController, URLSessionDelegate,URLSessionDataDel
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController?.navigationBar.isHidden = true
+        //self.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController?.navigationBar.isHidden = false
+        //self.navigationController?.navigationBar.isHidden = false
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        navigationController?.navigationBar.tintColor = UIColor.primary()
         doRequest()
     }
     

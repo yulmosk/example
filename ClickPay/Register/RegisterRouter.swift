@@ -18,7 +18,15 @@ class RegisterRouter {
         
     }
     
-    class func createRegisterModule(viewController: RegisterController, tabsController: UITabBarController?,index:Int) {
+    func openMenu(index:Int, tabController: UITabBarController?,selectedViewController: UIViewController?){
+        let controller = MenuController.init()
+        controller.modalPresentationStyle = .overCurrentContext
+        selectedViewController?.present(controller, animated: false, completion: nil)
+        tabController?.dismiss(animated: true, completion: nil)
+        MenuRouter.createMenuModule(viewController: controller, tabsController: tabController, selectedViewController:selectedViewController)
+    }
+    
+    class func createRegisterModule(viewController: RegisterController, tabsController: UITabBarController?,index:Int,selectedViewController: UIViewController?) {
         let presenter = RegisterPresenter()
         
         viewController.presenter = presenter
@@ -26,6 +34,7 @@ class RegisterRouter {
         viewController.presenter?.router = RegisterRouter()
         viewController.presenter?.view = viewController
         viewController.presenter?.tabsView = tabsController
+        viewController.presenter?.selectedViewController = selectedViewController
         
     }
 }

@@ -13,19 +13,19 @@ class TabBarPresenter {
     var router: TabBarRouter?
     weak var view: TabBarController?
     
-    func checkAuth(index:Int, tabController: UITabBarController?){
-        let isLoggedIn = false
+    func checkAuth(index:Int, tabController: UITabBarController?,selectedViewController: UIViewController?){
+        let isLoggedIn = Auth.shared.isAuth()
         switch isLoggedIn {
         case false:
             //Так как пользователь не залогинен переходим на страницу Логин
-            router?.goToLogin(index:index,tabController: tabController)
+            router?.goToLogin(index:index,tabController: tabController,selectedViewController: selectedViewController)
         default:
-            //Так как пользователь залогинен открываем tab
+            //Так как пользователь залогинен открываем tab или menu
             switch index {
                 case 1,2:
                     router?.goToTab(index:index,tabController: tabController)
                 case 3:
-                    router?.openMenu(index:index,tabController: tabController)
+                    router?.openMenu(index:index,tabController: tabController,selectedViewController: selectedViewController)
                 default:
                     print("Навигация")
             }

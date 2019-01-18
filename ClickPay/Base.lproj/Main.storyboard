@@ -139,34 +139,53 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="gg7-O8-AyB">
                                                 <rect key="frame" x="0.0" y="0.0" width="270" height="258"/>
                                                 <subviews>
-                                                    <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwJ-lG-PUG" userLabel="Text Field">
+                                                    <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="FREDERIC CHOPIN" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mwJ-lG-PUG" userLabel="Text Field" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="270" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="m8U-gx-Jhq"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="8rJ-Kc-sve" id="K9T-fB-kpC"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2d4-Gh-Wpr" userLabel="Text Field">
+                                                    <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+373 695 6532" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2d4-Gh-Wpr" userLabel="Text Field" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="52" width="270" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="O0s-mF-Vd7"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="password"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                                <color key="value" cocoaTouchSystemColor="darkTextColor"/>
+                                                            </userDefinedRuntimeAttribute>
+                                                        </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="8rJ-Kc-sve" id="pqY-Uj-y8K"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rkb-ig-jIY" userLabel="Text Field">
+                                                    <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="EMAIL" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Rkb-ig-jIY" userLabel="Text Field" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="104" width="270" height="50"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="50" id="19R-Zx-M39"/>
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="next" textContentType="password"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="8rJ-Kc-sve" id="iPi-DG-Djo"/>
+                                                        </connections>
                                                     </textField>
-                                                    <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wAD-Qx-0cB" userLabel="Text Field">
+                                                    <textField opaque="NO" alpha="0.80000001192092896" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="PASSWORD" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wAD-Qx-0cB" userLabel="Text Field" customClass="RegisterField" customModule="ClickPay" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="156" width="270" height="50"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                         <constraints>
@@ -174,7 +193,10 @@
                                                         </constraints>
                                                         <nil key="textColor"/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits" textContentType="password"/>
+                                                        <textInputTraits key="textInputTraits" returnKeyType="done" textContentType="password"/>
+                                                        <connections>
+                                                            <outlet property="delegate" destination="8rJ-Kc-sve" id="R5T-OG-FOp"/>
+                                                        </connections>
                                                     </textField>
                                                     <button opaque="NO" alpha="0.89999997615814209" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Riu-gZ-BW5" customClass="FormButton" customModule="ClickPay" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="208" width="270" height="50"/>
@@ -184,7 +206,7 @@
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                         <inset key="contentEdgeInsets" minX="16" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                        <state key="normal" title="My Cards">
+                                                        <state key="normal" title="MY CARDS">
                                                             <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                                         </state>
                                                     </button>
@@ -200,7 +222,7 @@
                                                     <constraint firstAttribute="height" constant="50" id="7OJ-6m-PBD"/>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
-                                                <state key="normal" title="Logout">
+                                                <state key="normal" title="SAVE">
                                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </state>
                                             </button>
@@ -237,8 +259,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yrk-Dz-vLf"/>
                     </view>
-                    <navigationItem key="navigationItem" id="blf-Rl-7pw"/>
+                    <navigationItem key="navigationItem" id="blf-Rl-7pw">
+                        <barButtonItem key="backBarButtonItem" title="      " id="Uqr-eN-T7v"/>
+                    </navigationItem>
                     <connections>
+                        <outlet property="emailField" destination="Rkb-ig-jIY" id="J74-O9-CO7"/>
+                        <outlet property="nameField" destination="mwJ-lG-PUG" id="So5-h9-Kvf"/>
+                        <outlet property="passwordField" destination="wAD-Qx-0cB" id="PqY-xt-fPh"/>
+                        <outlet property="phoneField" destination="2d4-Gh-Wpr" id="H2v-Rs-gMd"/>
                         <outlet property="scrollView" destination="RPW-51-RfH" id="NnP-hR-9g3"/>
                     </connections>
                 </viewController>
@@ -272,7 +300,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="twC-IU-Ouh"/>
                     </view>
-                    <navigationItem key="navigationItem" id="7XJ-3w-ljN"/>
+                    <navigationItem key="navigationItem" id="7XJ-3w-ljN">
+                        <barButtonItem key="backBarButtonItem" title="     " id="eef-NW-CZI"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="g6U-x8-HvW" id="QEV-1g-h2Q"/>
                     </connections>

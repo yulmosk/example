@@ -13,10 +13,16 @@ class RegisterPresenter {
     var router: RegisterRouter?
     weak var view: RegisterController?
     var tabsView: UITabBarController?
+    var selectedViewController: UIViewController?
     
     
     func registerTapped(index:Int){
-        router?.openTab(index: index, tabController: tabsView)
+        Auth.shared.saveTicket(ticket: "abc")
+        if index == 3 {
+            router?.openMenu(index:index, tabController: tabsView, selectedViewController: selectedViewController)
+        } else {
+            router?.openTab(index: index, tabController: tabsView)
+        }
     }
     
     func refreshTapped(){

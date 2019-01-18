@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MainController: UIViewController {
+class MainController: BaseController {
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -18,8 +18,9 @@ class MainController: UIViewController {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
         MainRouter.createMainModule(viewController: self)
-       
+        showCardBarItem(true)
     }
+    
 }
 
 extension MainController: UITableViewDataSource, UITableViewDelegate {

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MessagesController" customModule="ClickPay" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OOi-lF-R6D" userLabel="Adjustment">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bWM-M1-6VO" userLabel="Head">
+                    <rect key="frame" x="0.0" y="20" width="375" height="43"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NavLogo" translatesAutoresizingMaskIntoConstraints="NO" id="YJZ-5W-4Ta">
+                            <rect key="frame" x="149" y="10" width="77" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="YJZ-5W-4Ta" secondAttribute="height" multiplier="157:47" id="A8T-KX-XPu"/>
+                                <constraint firstAttribute="height" constant="23" id="FNl-lJ-9JX"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KlO-zu-vuR">
+                            <rect key="frame" x="20" y="0.0" width="50" height="43"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="NbW-Gb-KEM"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                            <state key="normal" title="Close">
+                                <color key="titleColor" red="0.58431372550000005" green="0.13725490200000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="closeTapped:" destination="-1" eventType="touchUpInside" id="68u-Dt-e5w"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="YJZ-5W-4Ta" firstAttribute="centerY" secondItem="bWM-M1-6VO" secondAttribute="centerY" id="0LI-vT-kd4"/>
+                        <constraint firstItem="YJZ-5W-4Ta" firstAttribute="centerX" secondItem="bWM-M1-6VO" secondAttribute="centerX" id="147-O5-Hu4"/>
+                        <constraint firstAttribute="height" constant="43" id="BGF-Zy-Is6"/>
+                        <constraint firstAttribute="bottom" secondItem="KlO-zu-vuR" secondAttribute="bottom" id="Nf4-xK-0ic"/>
+                        <constraint firstItem="KlO-zu-vuR" firstAttribute="top" secondItem="bWM-M1-6VO" secondAttribute="top" id="NpA-3c-ycW"/>
+                        <constraint firstItem="KlO-zu-vuR" firstAttribute="leading" secondItem="bWM-M1-6VO" secondAttribute="leading" constant="20" id="jA0-aX-Ek6"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MESSAGES" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoW-og-wgG">
+                    <rect key="frame" x="0.0" y="113" width="375" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="bWM-M1-6VO" secondAttribute="trailing" id="2Ps-d2-vj5"/>
+                <constraint firstItem="bWM-M1-6VO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="8j9-MU-vvI"/>
+                <constraint firstItem="OOi-lF-R6D" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="BuP-Mh-m3t"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="aoW-og-wgG" secondAttribute="trailing" id="EdC-IQ-Quj"/>
+                <constraint firstItem="OOi-lF-R6D" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bJM-W6-sgn"/>
+                <constraint firstItem="aoW-og-wgG" firstAttribute="top" secondItem="bWM-M1-6VO" secondAttribute="bottom" constant="50" id="bRX-IK-7kn"/>
+                <constraint firstItem="aoW-og-wgG" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cc3-CT-Pot"/>
+                <constraint firstItem="bWM-M1-6VO" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="dUr-qt-SaW"/>
+                <constraint firstAttribute="trailing" secondItem="OOi-lF-R6D" secondAttribute="trailing" id="fOR-Vs-lQs"/>
+                <constraint firstItem="bWM-M1-6VO" firstAttribute="bottom" secondItem="OOi-lF-R6D" secondAttribute="bottom" constant="-1" id="zYb-Aw-foP"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="NavLogo" width="78" height="23"/>
+    </resources>
+</document>

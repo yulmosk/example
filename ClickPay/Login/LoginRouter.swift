@@ -17,17 +17,24 @@ class LoginRouter {
         tabController?.dismiss(animated: true, completion: nil)
             
     }
+    func openMenu(index:Int, tabController: UITabBarController?,selectedViewController: UIViewController?){
+        let controller = MenuController.init()
+        controller.modalPresentationStyle = .overCurrentContext
+        selectedViewController?.present(controller, animated: false, completion: nil)
+         tabController?.dismiss(animated: true, completion: nil)
+        MenuRouter.createMenuModule(viewController: controller, tabsController: tabController, selectedViewController:selectedViewController)
+    }
     
-    func presentRegister(view: UIViewController,tabController: UITabBarController?,index:Int){
+    func presentRegister(view: UIViewController,tabController: UITabBarController?,index:Int,selectedViewController: UIViewController?){
         
         let controller = RegisterController.init()
         controller.modalPresentationStyle = .overCurrentContext
         tabController?.present(controller, animated: true, completion: nil)
-        RegisterRouter.createRegisterModule(viewController: controller, tabsController: tabController, index:index)
+        RegisterRouter.createRegisterModule(viewController: controller, tabsController: tabController, index:index, selectedViewController:selectedViewController)
         
     }
     
-    class func createLoginModule(viewController: LoginController, tabsController: UITabBarController?,index:Int) {
+    class func createLoginModule(viewController: LoginController, tabsController: UITabBarController?,index:Int,selectedViewController: UIViewController?) {
         let presenter = LoginPresenter()
         
         viewController.presenter = presenter
@@ -35,6 +42,7 @@ class LoginRouter {
         viewController.presenter?.router = LoginRouter()
         viewController.presenter?.view = viewController
         viewController.presenter?.tabsView = tabsController
+        viewController.presenter?.selectedViewController = selectedViewController
         
     }
 }

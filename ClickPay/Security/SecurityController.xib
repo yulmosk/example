@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecutityController" customModule="ClickPay" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="EpH-CS-KMa" id="OlX-2s-o2g"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="EpH-CS-KMa">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="v5K-Ht-stk" userLabel="Adjustment">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                            <real key="value" value="0.5"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                            <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JIJ-Fx-lPe" userLabel="Head">
+                    <rect key="frame" x="0.0" y="20" width="375" height="43"/>
+                    <subviews>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NavLogo" translatesAutoresizingMaskIntoConstraints="NO" id="FVM-7f-IAl">
+                            <rect key="frame" x="149" y="10" width="77" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="23" id="Bek-td-hCw"/>
+                                <constraint firstAttribute="width" secondItem="FVM-7f-IAl" secondAttribute="height" multiplier="157:47" id="rQN-Te-h5l"/>
+                            </constraints>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UTm-gM-V5M">
+                            <rect key="frame" x="20" y="0.0" width="50" height="43"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="2BH-Lh-5ZP"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="13"/>
+                            <state key="normal" title="Close">
+                                <color key="titleColor" red="0.58431372550000005" green="0.13725490200000001" blue="0.55294117649999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="closeTapped:" destination="-1" eventType="touchUpInside" id="B1G-MY-q0Z"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="FVM-7f-IAl" firstAttribute="centerY" secondItem="JIJ-Fx-lPe" secondAttribute="centerY" id="AGw-3o-omb"/>
+                        <constraint firstAttribute="bottom" secondItem="UTm-gM-V5M" secondAttribute="bottom" id="Fbm-h9-Ceh"/>
+                        <constraint firstItem="UTm-gM-V5M" firstAttribute="leading" secondItem="JIJ-Fx-lPe" secondAttribute="leading" constant="20" id="VE3-pp-4dH"/>
+                        <constraint firstItem="FVM-7f-IAl" firstAttribute="centerX" secondItem="JIJ-Fx-lPe" secondAttribute="centerX" id="jSN-Lt-Q4f"/>
+                        <constraint firstItem="UTm-gM-V5M" firstAttribute="top" secondItem="JIJ-Fx-lPe" secondAttribute="top" id="we7-84-qLN"/>
+                        <constraint firstAttribute="height" constant="43" id="x95-Ju-f4P"/>
+                    </constraints>
+                </view>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SECURITY" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jsH-Vc-59V">
+                    <rect key="frame" x="0.0" y="113" width="375" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="v5K-Ht-stk" secondAttribute="trailing" id="1Fq-h6-J30"/>
+                <constraint firstItem="JIJ-Fx-lPe" firstAttribute="bottom" secondItem="v5K-Ht-stk" secondAttribute="bottom" constant="-1" id="4Ik-zF-NzS"/>
+                <constraint firstItem="v5K-Ht-stk" firstAttribute="top" secondItem="EpH-CS-KMa" secondAttribute="top" id="4Rm-Bp-zPY"/>
+                <constraint firstItem="jsH-Vc-59V" firstAttribute="top" secondItem="JIJ-Fx-lPe" secondAttribute="bottom" constant="50" id="5R5-cm-W0l"/>
+                <constraint firstItem="v5K-Ht-stk" firstAttribute="leading" secondItem="EpH-CS-KMa" secondAttribute="leading" id="WaS-8B-Ung"/>
+                <constraint firstItem="WiA-4s-lOL" firstAttribute="trailing" secondItem="jsH-Vc-59V" secondAttribute="trailing" id="aJI-ot-SaP"/>
+                <constraint firstItem="WiA-4s-lOL" firstAttribute="trailing" secondItem="JIJ-Fx-lPe" secondAttribute="trailing" id="d7G-wa-tAK"/>
+                <constraint firstItem="jsH-Vc-59V" firstAttribute="leading" secondItem="WiA-4s-lOL" secondAttribute="leading" id="odp-ag-FfN"/>
+                <constraint firstItem="JIJ-Fx-lPe" firstAttribute="leading" secondItem="WiA-4s-lOL" secondAttribute="leading" id="p1k-Ts-rhn"/>
+                <constraint firstItem="JIJ-Fx-lPe" firstAttribute="top" secondItem="WiA-4s-lOL" secondAttribute="top" id="reI-pV-1cW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="WiA-4s-lOL"/>
+            <point key="canvasLocation" x="-516" y="3"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="NavLogo" width="78" height="23"/>
+    </resources>
+</document>

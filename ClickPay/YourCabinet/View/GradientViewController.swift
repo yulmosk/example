@@ -8,7 +8,7 @@
 
 import UIKit
 
-class GradientViewController: UIViewController {
+class GradientViewController: BaseController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,6 +25,7 @@ class GradientViewController: UIViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         addGradient()
     }
 }

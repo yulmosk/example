@@ -17,6 +17,8 @@ class MenuController: UIViewController {
     @IBOutlet weak var menuOffset: NSLayoutConstraint!
     @IBOutlet weak var menuTable: UITableView!
     
+    var presenter: MenuPresenter?
+    
     let controllerNibName = "MenuController"
     let cellNibName = "MenuViewCell"
     init() {
@@ -91,7 +93,7 @@ extension MenuController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        //presenter?.showTransferForm(formIndex: indexPath.row, view: self)
+        presenter?.showMenuScreen(index: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

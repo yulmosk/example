@@ -11,12 +11,12 @@ import UIKit
 
 class TabBarRouter {
     
-    func goToLogin(index:Int, tabController: UITabBarController?){
+    func goToLogin(index:Int, tabController: UITabBarController?,selectedViewController: UIViewController?){
         let controller = LoginController.init()
         controller.modalPresentationStyle = .overCurrentContext
         tabController?.present(controller, animated: true, completion: nil)
         
-        LoginRouter.createLoginModule(viewController: controller, tabsController: tabController, index:index)
+        LoginRouter.createLoginModule(viewController: controller, tabsController: tabController, index:index, selectedViewController:selectedViewController)
     }
     
     
@@ -24,10 +24,11 @@ class TabBarRouter {
         tabController?.selectedIndex = index
     }
     
-    func openMenu(index:Int, tabController: UITabBarController?){
+    func openMenu(index:Int, tabController: UITabBarController?, selectedViewController: UIViewController?){
         let controller = MenuController.init()
         controller.modalPresentationStyle = .overCurrentContext
-        tabController?.present(controller, animated: false, completion: nil)
+        selectedViewController?.present(controller, animated: false, completion: nil)
+        MenuRouter.createMenuModule(viewController: controller, tabsController: tabController, selectedViewController:selectedViewController)
     }
     
     class func createTabBarModule(tabController: TabBarController) {
