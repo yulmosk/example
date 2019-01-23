@@ -35,19 +35,6 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
                     return true
             }
         }
-        
-        
-        /*print("Selected Index: \(selectedIndex)")
-        print("Откуда идем: \(selectedViewController?.title)")
-        print("Куда идем: \(viewController.title)")
-        selectedViewController?.dismiss(animated: true, completion: nil)
-        if let title = viewController.title, title == "Menu" {
-            //do your custom actions
-            //let controller = ModalController.init()
-            //controller.modalPresentationStyle = .overCurrentContext
-            //selectedViewController?.present(controller, animated: true, completion: nil)
-            return false
-        }*/
         return true
     }
     

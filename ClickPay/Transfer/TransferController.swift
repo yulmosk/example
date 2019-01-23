@@ -13,6 +13,7 @@ import SafariServices
 
 class TransferController: BaseController, URLSessionDelegate,URLSessionDataDelegate {
    
+    var presenter: TransferPresenter?
     var formIndex = 0
     
     private lazy var webView: WKWebView = {
@@ -66,18 +67,16 @@ class TransferController: BaseController, URLSessionDelegate,URLSessionDataDeleg
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        //self.navigationController?.navigationBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        //self.navigationController?.navigationBar.isHidden = false
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.tintColor = UIColor.primary()
-        doRequest()
+        presenter?.loadForm(formIndex: formIndex)
     }
     
     override func viewDidLayoutSubviews() {
@@ -120,93 +119,20 @@ class TransferController: BaseController, URLSessionDelegate,URLSessionDataDeleg
         present(safariVC, animated: true, completion: nil)
         
     }
-    
-    func doRequest(){
-        showActivityIndicator(true)
         
-        //Это верменный запрос
-        let name = "P2P_RequestMob"
-        print("Это имя операции: \(name)")
-        let document = AEXMLDocument()
-        
-        let attributes = [
-            "xmlns:soapenv": "http://schemas.xmlsoap.org/soap/envelope/",
-            "xmlns:tem": "http://tempuri.org/"
-        ]
-        let envelopeElement = document.addChild(
-            name: "soapenv:Envelope", attributes: attributes
-        )
-        envelopeElement.addChild(name: "soapenv:Header")
-        let bodyElement = envelopeElement.addChild(name: "soapenv:Body")
-        let actionElement = bodyElement.addChild(name: "tem:\(name)")
-        actionElement.addChild(
-            name: "tem:ClientId",
-            value: "0"
-        )
-        actionElement.addChild(
-            name: "tem:PaymentDestination",
-            value: Constants.forms[formIndex]
-        )
-        actionElement.addChild(
-            name: "tem:Lang",
-            value: Constants.getLang()
-        )
-        actionElement.addChild(
-            name: "tem:Ip",
-            value: getWiFiAddress() ?? "unavailable"
-        )
-        
-        
-        
-        let envelope = document.xmlCompact
-        print(envelope)
-
-        
-        
-        let urlString = "https://46.55.111.156/ClickPayService/Service.svc?wsdl"
-
-        let url = URL(string: urlString)
-        var theRequest = URLRequest(url: url!)
-        let msgLength = envelope.count
-        
-        theRequest.addValue("text/xml; charset=utf-8", forHTTPHeaderField: "Content-Type")
-        theRequest.addValue("\(msgLength)", forHTTPHeaderField: "Content-Length")
-        theRequest.addValue("http://tempuri.org/IClickPayService/P2P_RequestMob", forHTTPHeaderField: "SOAPAction")
-        
-        
-        theRequest.httpMethod = "POST"
-        theRequest.httpBody = envelope.data(using: .utf8)
-        print("Проверяем: ")
-       
-        
-        let config = URLSessionConfiguration.default
-        let session = URLSession(configuration:config, delegate: self, delegateQueue: OperationQueue.main)
-       
-        let task = session.dataTask(with: theRequest, completionHandler:{ (data, response, error) -> Void in
-            if let err = error {
-                print("error \(err)")
-                //complete(nil, err)
-                return
-            }
-            
-            do {
-                let (code, message) = try xmlParse(from: data!)
-                self.webView.loadHTMLString(message!, baseURL: nil)
-                //self.formView.loadHTMLString(message!, baseURL: nil)
-                //complete(response, nil)
-            } catch {
-                print("error on parse \(error)")
-                //complete(nil, error)
-            }
-        })
-        task.resume()
-    }
-    
-    
     func goBack(){
         navigationController?.popViewController(animated: true)
     }
     
+    func showErrorInfo(message: String){
+        showInfo(message: message, bottomTitle: "OK"){ [weak self] in
+            self?.webView.load(URLRequest(url: URL(string: "about:blank")!))
+        }
+    }
+    
+    func loadForm(htmlString: String){
+        self.webView.loadHTMLString(htmlString, baseURL: nil)
+    }
     
     
     

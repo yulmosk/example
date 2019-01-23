@@ -7,5 +7,6 @@ target 'ClickPay' do
 
   # Pods for ClickPay
     pod 'AEXML'
+    pod 'XMLParsing', :git => 'https://github.com/ShawnMoore/XMLParsing.git'
 
 end

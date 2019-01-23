@@ -13,4 +13,19 @@ extension String {
         let content = try String(contentsOfFile: path)
         return content.components(separatedBy: .newlines).joined()
     }
+    public func capitalizingFirstLetter() -> String {
+        return prefix(1).uppercased() + dropFirst()
+    }
+    
+    public mutating func capitalizeFirstLetter() {
+        self = self.capitalizingFirstLetter()
+    }
+    
+    public func lowercasingFirstLetter() -> String {
+        return prefix(1).lowercased() + dropFirst()
+    }
+    
+    public mutating func lowercaseFirstLetter() {
+        self = self.lowercasingFirstLetter()
+    }
 }

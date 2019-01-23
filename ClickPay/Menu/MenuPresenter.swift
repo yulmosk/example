@@ -34,8 +34,7 @@ class MenuPresenter {
             controller = ContactController.init()
         case Links.settings.rawValue:
             controller = SettingsController.init()
-        default:
-            print("Не существующая ссылка")
+        default: ()
         }
         
         if let controller = controller {

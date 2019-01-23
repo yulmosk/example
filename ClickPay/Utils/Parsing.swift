@@ -35,7 +35,7 @@ func xmlParse(from data:Data) throws -> (Code,String?) {
     return (code, message)
 }
 
-public enum Code: Int, Error {
+/*public enum Code: Int, Error {
     case success = 0
     case exception = -1
     case authAccountDisable = 1
@@ -63,5 +63,5 @@ public enum Code: Int, Error {
     case balanceRequest = 23
     case invalidTicket = 24
     case dublicateLogin = 51
-}
+}*/
 

@@ -16,7 +16,7 @@ class MainRouter {
         viewController.formIndex = formIndex
         view.navigationController?.pushViewController(viewController, animated: true)
         
-        //TransferWireFrame.createTransferModule(formIndex: Int, viewController:viewController)
+        TransferRouter.createTransferModule(viewController:viewController)
     }
     
     class func createMainModule(viewController: MainController) {

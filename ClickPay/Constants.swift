@@ -42,6 +42,9 @@ class Constants {
         if let lang = Locale.current.languageCode, lang == "ru" {
             return lang
         }
+        if let lang = Locale.current.languageCode, lang == "ro" {
+            return lang
+        }
         return "ro"
     }
     
@@ -60,3 +63,9 @@ class Constants {
         "var head = document.getElementsByTagName('head')[0];" + "head.appendChild(meta);"
     static let endPoint = "https://46.55.111.156/ClickPayService/Service.svc?wsdl"
 }
+
+
+
+
+
+

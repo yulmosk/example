@@ -26,8 +26,7 @@ class TabBarPresenter {
                     router?.goToTab(index:index,tabController: tabController)
                 case 3:
                     router?.openMenu(index:index,tabController: tabController,selectedViewController: selectedViewController)
-                default:
-                    print("Навигация")
+                default: ()
             }
             
         }

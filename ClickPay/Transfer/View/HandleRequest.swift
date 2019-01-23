@@ -17,8 +17,14 @@ extension TransferController {
         switch target {
         
         case let response where response.contains("rc="):
-            let success = response.contains("rc=00")
-            let message = success ? "P2P.Transaction.Success".localized : "P2P.Transaction.Failed".localized
+            var message = "P2P.Transaction.Failed".localized
+            if  response.contains("rc=00") {
+                message = "P2P.Transaction.Success".localized
+            }
+            if response.contains("rc=09"){
+                message = "P2P.Transaction.Success".localized
+            }
+            
             showInfo(message: message, bottomTitle: "OK"){ [weak self] in
                 self?.goBack()
             }
@@ -40,7 +46,7 @@ extension TransferController {
                     case "left":
                          self?.goBack()
                     case "right":
-                        self?.doRequest()
+                        self?.presenter?.loadForm(formIndex: self?.formIndex ?? 0)
                     default:
                         self?.goBack()
                 }
