@@ -39,11 +39,6 @@ class MenuPresenter {
         
         if let controller = controller {
             router?.openLink(controller: controller, view: view)
-//            print("Здесь")
-//            print(selectedViewController)
-//            print(controller)
-//            selectedViewController?.navigationController?.pushViewController(controller, animated: true)
-            //view?.present(controller, animated: true)
         }
     }
 }

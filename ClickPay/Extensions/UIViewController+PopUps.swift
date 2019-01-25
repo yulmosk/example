@@ -25,7 +25,7 @@ extension UIViewController {
     
     func showInfo(message: String, bottomTitle:String, complete:(() -> Void)?){
         
-        let alert = UIAlertController(title: message, message: "", preferredStyle: .alert)
+        let alert = UIAlertController(title: "", message: message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: bottomTitle, style: .default, handler: { (alert: UIAlertAction!) in
             complete?()
         }))

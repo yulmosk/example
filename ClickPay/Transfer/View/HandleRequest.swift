@@ -22,7 +22,7 @@ extension TransferController {
                 message = "P2P.Transaction.Success".localized
             }
             if response.contains("rc=09"){
-                message = "P2P.Transaction.Success".localized
+                message = "P2P.Transaction.PartlySuccess".localized
             }
             
             showInfo(message: message, bottomTitle: "OK"){ [weak self] in

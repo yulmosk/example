@@ -20,6 +20,7 @@
 
 "P2P.Error.SessionExpired" = "Expired session";
 "P2P.Transaction.Success" = "Transaction Success";
+"P2P.Transaction.PartlySuccess" = "The transfer has been sent. To transfer money to the card, the Recipient must follow the link in the received message, and follow the instructions. Otherwise, after 7 days the money will be returned to the sender.";
 "P2P.Transaction.Failed" = "Transaction Failed";
 
 "Popup.Action.Cancel" = "Cancel";
