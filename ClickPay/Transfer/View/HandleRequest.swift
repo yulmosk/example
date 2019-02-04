@@ -25,10 +25,11 @@ extension TransferController {
                 message = "P2P.Transaction.PartlySuccess".localized
             }
             
-            showInfo(message: message, bottomTitle: "OK"){ [weak self] in
+            let action = PopupAction(title: "Popup.Action.Ok".localized) { [weak self]  in
                 self?.goBack()
             }
-            
+            addImage()
+            PopupController.showPopup(message: message, actions: [action], on: self)
             return .cancel
             
         case let answer where answer.contains(".pdf"):
@@ -41,16 +42,18 @@ extension TransferController {
             let leftTitle = "Popup.Action.Cancel".localized
             let rightTitle = "Popup.Action.Refresh".localized
             
-            showConfirm(message: message, leftTitle: leftTitle, rightTitle: rightTitle){ [weak self] str in
-                switch str {
-                    case "left":
-                         self?.goBack()
-                    case "right":
-                        self?.presenter?.loadForm(formIndex: self?.formIndex ?? 0)
-                    default:
-                        self?.goBack()
+            let actions = [
+                PopupAction(title: leftTitle) {  [weak self]  in
+                    guard let vc = self else { return }
+                    vc.goBack()
+                },
+                PopupAction(title: rightTitle) {  [weak self]  in
+                    guard let vc = self else { return }
+                    vc.presenter?.loadForm(formIndex: self?.formIndex ?? 0)
                 }
-            }
+            ]
+             PopupController.showPopup(message: message, actions: actions, on: self)
+            
             return .cancel
             
         case let x where x == "https://www.secure11gw.ro/portal/cgi-bin/":

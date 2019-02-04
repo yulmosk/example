@@ -22,9 +22,12 @@
 "P2P.Transaction.Success" = "Транзакция успешна";
 "P2P.Transaction.PartlySuccess" = "Перевод был отправлен. Чтобы зачислить деньги на карту, Получатель должен перейти по ссылке в полученном сообщении, и следовать инструкциям. В противном случае, через 7 дней деньги будут возвращены отправителю.";
 "P2P.Transaction.Failed" = "Транзакция отклонена";
+"P2P.Form.Failed" = "Ошибка сервера";
 
 "Popup.Action.Cancel" = "Отмена";
 "Popup.Action.Refresh" = "Обновить";
+"Popup.Action.Ok" = "Хорошо";
+"Popup.Action.Sorry" = "I'm Sorry...";
 
 "Menu.About" = "О ПРОЕКТЕ";
 "Menu.Cards" = "КАРТЫ";

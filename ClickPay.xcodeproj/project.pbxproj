@@ -43,6 +43,9 @@
 		8D6E32F121DCA6F200D5CFC7 /* UIViewController+SSL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6E32F021DCA6F200D5CFC7 /* UIViewController+SSL.swift */; };
 		8D6E32F621DD3FFD00D5CFC7 /* Parsing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6E32F521DD3FFD00D5CFC7 /* Parsing.swift */; };
 		8D6E32F821DD401A00D5CFC7 /* GetIp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D6E32F721DD401A00D5CFC7 /* GetIp.swift */; };
+		8D7164FB220475B90052A710 /* PopupController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7164F9220475B90052A710 /* PopupController.swift */; };
+		8D7164FC220475B90052A710 /* PopupController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D7164FA220475B90052A710 /* PopupController.xib */; };
+		8D7164FF2204AC8C0052A710 /* PopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7164FE2204AC8C0052A710 /* PopupButton.swift */; };
 		8D7772B721E5BF2C00032FE9 /* UIImageView+Rounded.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D7772B621E5BF2C00032FE9 /* UIImageView+Rounded.swift */; };
 		8D87B3F521D7982F00F2FCFD /* TransferController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D87B3F321D7982F00F2FCFD /* TransferController.swift */; };
 		8D87B3F621D7982F00F2FCFD /* TransferController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D87B3F421D7982F00F2FCFD /* TransferController.xib */; };
@@ -132,6 +135,9 @@
 		8D6E32F021DCA6F200D5CFC7 /* UIViewController+SSL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+SSL.swift"; sourceTree = "<group>"; };
 		8D6E32F521DD3FFD00D5CFC7 /* Parsing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Parsing.swift; sourceTree = "<group>"; };
 		8D6E32F721DD401A00D5CFC7 /* GetIp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetIp.swift; sourceTree = "<group>"; };
+		8D7164F9220475B90052A710 /* PopupController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupController.swift; sourceTree = "<group>"; };
+		8D7164FA220475B90052A710 /* PopupController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PopupController.xib; sourceTree = "<group>"; };
+		8D7164FE2204AC8C0052A710 /* PopupButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupButton.swift; sourceTree = "<group>"; };
 		8D7772B621E5BF2C00032FE9 /* UIImageView+Rounded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+Rounded.swift"; sourceTree = "<group>"; };
 		8D87B3F321D7982F00F2FCFD /* TransferController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TransferController.swift; sourceTree = "<group>"; };
 		8D87B3F421D7982F00F2FCFD /* TransferController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TransferController.xib; sourceTree = "<group>"; };
@@ -331,6 +337,24 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		8D7164F82204755C0052A710 /* PopupController */ = {
+			isa = PBXGroup;
+			children = (
+				8D7164FD220486D60052A710 /* View */,
+				8D7164F9220475B90052A710 /* PopupController.swift */,
+				8D7164FA220475B90052A710 /* PopupController.xib */,
+			);
+			path = PopupController;
+			sourceTree = "<group>";
+		};
+		8D7164FD220486D60052A710 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8D7164FE2204AC8C0052A710 /* PopupButton.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8D87B3F121D78F6000F2FCFD /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -460,6 +484,7 @@
 				8D13BD1F21F1E6B20078EB66 /* Settings */,
 				8D61659721D6A60B00101F22 /* Extensions */,
 				8D6E32F421DD3F7C00D5CFC7 /* Utils */,
+				8D7164F82204755C0052A710 /* PopupController */,
 				8D13BCFA21F07AA70078EB66 /* Base */,
 				8D6E32EF21DCA05400D5CFC7 /* API */,
 				8D61659521D68B9400101F22 /* Constants.swift */,
@@ -637,6 +662,7 @@
 				8D92F3F421E9EB3E00360E22 /* MenuController.xib in Resources */,
 				8D13BD0A21F0E3610078EB66 /* MessagesController.xib in Resources */,
 				8D13BD2321F1E6D40078EB66 /* SettingsController.xib in Resources */,
+				8D7164FC220475B90052A710 /* PopupController.xib in Resources */,
 				8D87B40F21DBAF6200F2FCFD /* RegisterController.xib in Resources */,
 				8D13BD0F21F0F1B60078EB66 /* AboutController.xib in Resources */,
 				8D91B1EA21D368C400CAC478 /* Main.storyboard in Resources */,
@@ -701,6 +727,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D7164FB220475B90052A710 /* PopupController.swift in Sources */,
 				8D87B40E21DBAF6200F2FCFD /* RegisterController.swift in Sources */,
 				8D91B1E721D368C400CAC478 /* YourCabinetController.swift in Sources */,
 				8D6E32F121DCA6F200D5CFC7 /* UIViewController+SSL.swift in Sources */,
@@ -756,6 +783,7 @@
 				8D8B2DE121DFBE2C007B6F13 /* YourCabinetPresenter.swift in Sources */,
 				8D9C7D5F21E665C600B42B92 /* HistoryCell.swift in Sources */,
 				8D8B2DDF21DFBE0A007B6F13 /* YourCabinetRouter.swift in Sources */,
+				8D7164FF2204AC8C0052A710 /* PopupButton.swift in Sources */,
 				8D8B2DE321DFCF0B007B6F13 /* String+Localized.swift in Sources */,
 				8DEE6D6921F8686B0039B1B0 /* SoapManager.swift in Sources */,
 				8D6E32F821DD401A00D5CFC7 /* GetIp.swift in Sources */,

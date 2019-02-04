@@ -44,6 +44,27 @@ extension MainController: UITableViewDataSource, UITableViewDelegate {
         return 160.0
     }
     
+    func testPopup(){
+        
+         let actions = [
+            PopupAction(title: "Popup.Action.Confirm".localized) {  [weak self]  in
+                guard let vc = self else { return }
+                vc.dismiss(animated: true)
+         },
+            PopupAction(title: "Popup.Action.Deny".localized) {  [weak self]  in
+                guard let vc = self else { return }
+                vc.dismiss(animated: true)
+         }
+         ]
+ 
+        let action = PopupAction(title: "OK") { [weak self]  in
+            guard let vc = self else { return }
+            vc.dismiss(animated: true)
+        }
+
+        PopupController.showPopup(message: "test", actions: actions, on: self)
+    }
+    
 }
 
 

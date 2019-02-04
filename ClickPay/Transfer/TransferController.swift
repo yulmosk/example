@@ -31,7 +31,7 @@ class TransferController: BaseController, URLSessionDelegate,URLSessionDataDeleg
         let bounds = UIScreen.main.bounds
         
         let webView = WKWebView(frame: bounds, configuration: config)
-        webView.backgroundColor = .white
+        webView.backgroundColor = .clear
         webView.navigationDelegate = self
         webView.scrollView.delegate = self
         webView.allowsLinkPreview = false
@@ -45,7 +45,7 @@ class TransferController: BaseController, URLSessionDelegate,URLSessionDataDeleg
 
     private lazy var activityIndicator: UIActivityIndicatorView = {
         let activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
-        activityIndicator.backgroundColor = .white
+        activityIndicator.backgroundColor = .clear
         activityIndicator.color = .primary()
 
         activityIndicator.hidesWhenStopped = true
@@ -125,15 +125,33 @@ class TransferController: BaseController, URLSessionDelegate,URLSessionDataDeleg
     }
     
     func showErrorInfo(message: String){
-        showInfo(message: message, bottomTitle: "OK"){ [weak self] in
+        showActivityIndicator(false)
+        addImage()
+        let action = PopupAction(title: "Popup.Action.Ok".localized) { [weak self]  in
             self?.webView.load(URLRequest(url: URL(string: "about:blank")!))
+            self?.goBack()
         }
+        PopupController.showPopup(message: message, actions: [action], on: self)
     }
     
     func loadForm(htmlString: String){
-        self.webView.loadHTMLString(htmlString, baseURL: nil)
+        if(htmlString.contains(Constants.doNotGetForm)){
+            showActivityIndicator(false)
+            addImage()
+            let action = PopupAction(title: "Popup.Action.Ok".localized) { [weak self]  in
+               self?.goBack()
+            }
+             PopupController.showPopup(message: "P2P.Form.Failed".localized, actions: [action], on: self)
+        } else {
+            self.webView.loadHTMLString(htmlString, baseURL: nil)
+        }
     }
     
-    
+    func addImage(){
+        let image = UIImage(named: "StartBg")
+        let imageView = UIImageView(image: image!)
+        imageView.frame = view.bounds
+        view.addSubview(imageView)
+    }
     
 }

@@ -62,6 +62,7 @@ class Constants {
         "meta.content = 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no';" +
         "var head = document.getElementsByTagName('head')[0];" + "head.appendChild(meta);"
     static let endPoint = "https://46.55.111.156/ClickPayService/Service.svc?wsdl"
+    static let doNotGetForm = "Object reference not set to an instance of an object."
 }
 
 

@@ -22,9 +22,12 @@
 "P2P.Transaction.Success" = "Tranzacția efectuata cu succes";
 "P2P.Transaction.PartlySuccess" = " Transferul a fost expediat. Pentru a primi banii pe card, Beneficiarul urmează să acceseze link-ul din mesajul primit și să urmeze instrucțiunile. În caz contrar, peste 7 zile, banii vor fi returnați.";
 "P2P.Transaction.Failed" = "Eroare. Tranzacția nu a avut loc.";
+"P2P.Form.Failed" = "Server error";
 
 "Popup.Action.Cancel" = "Cancel";
 "Popup.Action.Refresh" = "Refresh";
+"Popup.Action.Ok" = "Bine";
+"Popup.Action.Sorry" = "I'm Sorry...";
 
 "Menu.About" = "DESPRE PROIECT";
 "Menu.Cards" = "CARDS";
