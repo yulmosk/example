@@ -29,8 +29,22 @@
 "Popup.Action.Ok" = "Bine";
 "Popup.Action.Sorry" = "I'm Sorry...";
 
-"Menu.About" = "DESPRE PROIECT";
+"Menu.About" = "GHIDUL UTILIZATORULUI";
 "Menu.Cards" = "CARDS";
 "Menu.Security" = "SECURITATE";
 "Menu.Contact" = "CONTACTE";
 "Menu.Settings" = "SETARI";
+
+"Video.Title.0" = "Transfer de la card la card";
+"Video.Title.1" = "Înregistrarea pe www.moneysend.mastercard.md";
+"Video.Title.2" = "Transfer doar cu Nr. de telefon mobil destinatarului";
+"Video.Title.3" = "Primesc transferul, expediat prin Nr. de telefon  mobil";
+"Video.Title.4" = "Transfer doar cu adresa e-mail destinatarului";
+"Video.Title.5" = "Primesc transferul, expediat prin adresa e-mail";
+
+"Video.Code.0" = "q3o1TQzTH94";
+"Video.Code.1" = "oUR4p6d31g8";
+"Video.Code.2" = "Y-18AGqoh_w";
+"Video.Code.3" = "mWtBRy9Xhr0";
+"Video.Code.4" = "edDNPDcNeQo";
+"Video.Code.5" = "xW1aue1cKKU";

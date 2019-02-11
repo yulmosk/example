@@ -18,7 +18,7 @@ class MainController: BaseController {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
         MainRouter.createMainModule(viewController: self)
-        showCardBarItem(true)
+        //showCardBarItem(true)
     }
     
 }
@@ -43,28 +43,6 @@ extension MainController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 160.0
     }
-    
-    func testPopup(){
-        
-         let actions = [
-            PopupAction(title: "Popup.Action.Confirm".localized) {  [weak self]  in
-                guard let vc = self else { return }
-                vc.dismiss(animated: true)
-         },
-            PopupAction(title: "Popup.Action.Deny".localized) {  [weak self]  in
-                guard let vc = self else { return }
-                vc.dismiss(animated: true)
-         }
-         ]
- 
-        let action = PopupAction(title: "OK") { [weak self]  in
-            guard let vc = self else { return }
-            vc.dismiss(animated: true)
-        }
-
-        PopupController.showPopup(message: "test", actions: actions, on: self)
-    }
-    
 }
 
 

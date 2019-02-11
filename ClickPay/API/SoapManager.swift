@@ -21,6 +21,7 @@ class SoapManager: NSObject, URLSessionDelegate{
         let session = URLSession(configuration:config, delegate: self, delegateQueue: OperationQueue.main)
         
         let task = session.dataTask(with: URLRequest(request)) { (data, response, error) in
+            print("ответ \(response)")
             if let err = error {
                 print("error \(err)")
                 complete(nil, err)

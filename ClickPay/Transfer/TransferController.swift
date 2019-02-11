@@ -75,7 +75,7 @@ class TransferController: BaseController, URLSessionDelegate,URLSessionDataDeleg
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationController?.navigationBar.tintColor = UIColor.primary()
+        navigationController?.navigationBar.tintColor = UIColor.white
         presenter?.loadForm(formIndex: formIndex)
     }
     
@@ -143,6 +143,7 @@ class TransferController: BaseController, URLSessionDelegate,URLSessionDataDeleg
             }
              PopupController.showPopup(message: "P2P.Form.Failed".localized, actions: [action], on: self)
         } else {
+            print(htmlString)
             self.webView.loadHTMLString(htmlString, baseURL: nil)
         }
     }

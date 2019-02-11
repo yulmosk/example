@@ -25,6 +25,20 @@ extension UIColor {
         return  UIColor(rgb: 0x0076c1)
     }
     
+    class func light() -> UIColor {
+        return  UIColor(rgb: 0xa6269d)
+    }
+    
+    class func dark() -> UIColor {
+        return  UIColor(rgb: 0x694ba6)
+    }
+    
+    class func point() -> UIColor {
+        return  UIColor(rgb: 0x58C0E1)
+    }
+    
+    
+    
     convenience init(red: Int, green: Int, blue: Int) {
         assert(red >= 0 && red <= 255, "Invalid red component")
         assert(green >= 0 && green <= 255, "Invalid green component")

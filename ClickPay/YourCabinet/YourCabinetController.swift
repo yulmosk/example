@@ -24,7 +24,7 @@ class YourCabinetController: GradientViewController, UIScrollViewDelegate {
         super.viewDidLoad()
         scrollView.delegate = self
         YourCabinetRouter.createYourCabinetModule(viewController: self)
-        showCardBarItem(true)
+        //showCardBarItem(true)
         editFieldsSetUp()
         //presenter?.checkAuth(view: self)
     }

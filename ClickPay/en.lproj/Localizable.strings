@@ -30,8 +30,23 @@
 "Popup.Action.Ok" = "Got it";
 "Popup.Action.Sorry" = "I'm Sorry...";
 
-"Menu.About" = "ABOUT";
+"Menu.About" = "USER GUIDE";
 "Menu.Cards" = "CARDS";
 "Menu.Security" = "SECURITY";
 "Menu.Contact" = "CONTACT";
 "Menu.Settings" = "SETTINGS";
+
+"Video.Title.0" = "Transfer from card to card";
+"Video.Title.1" = "Registration at www.moneysend.mastercard.md";
+"Video.Title.2" = "Transfer using the recipient's mobile phone number";
+"Video.Title.3" = "Get money sent to me by my mobile number";
+"Video.Title.4" = "Transfer using the recipient's e-mail address";
+"Video.Title.5" = "Get money sent to me at my email address";
+
+"Video.Code.0" = "q3o1TQzTH94";
+"Video.Code.1" = "oUR4p6d31g8";
+"Video.Code.2" = "Y-18AGqoh_w";
+"Video.Code.3" = "mWtBRy9Xhr0";
+"Video.Code.4" = "edDNPDcNeQo";
+"Video.Code.5" = "xW1aue1cKKU";
+

@@ -63,6 +63,9 @@ class Constants {
         "var head = document.getElementsByTagName('head')[0];" + "head.appendChild(meta);"
     static let endPoint = "https://46.55.111.156/ClickPayService/Service.svc?wsdl"
     static let doNotGetForm = "Object reference not set to an instance of an object."
+    
+    static let youTubeEndPoint = "https://www.youtube.com/embed/"
+    static let videoCodes = ["0","1","2","3","4","5"]
 }
 
 

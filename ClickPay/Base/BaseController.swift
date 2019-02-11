@@ -12,6 +12,7 @@ class BaseController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.setGradientBackground(colors: [UIColor.light().cgColor,UIColor.dark().cgColor])
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -25,6 +26,7 @@ class BaseController: UIViewController {
             }
         }
     }
+    
     
 
 }

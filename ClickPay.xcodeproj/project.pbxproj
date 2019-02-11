@@ -32,6 +32,7 @@
 		8D3E281A21EB84E2007C7144 /* MenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E281821EB84E2007C7144 /* MenuViewCell.xib */; };
 		8D419A8A21EF5910007FC3CD /* UIViewController+NabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D419A8921EF5910007FC3CD /* UIViewController+NabBar.swift */; };
 		8D419A8C21EF617C007FC3CD /* UserNitificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D419A8B21EF617C007FC3CD /* UserNitificationsView.swift */; };
+		8D426E4D220DBB2900039FAA /* UINavigationBar+Gradient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D426E4C220DBB2900039FAA /* UINavigationBar+Gradient.swift */; };
 		8D48C34B21ED8FFB00D0E097 /* LoginTextFields.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48C34A21ED8FFB00D0E097 /* LoginTextFields.swift */; };
 		8D48C34D21EDD03D00D0E097 /* FormButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48C34C21EDD03D00D0E097 /* FormButton.swift */; };
 		8D48C34F21EE098E00D0E097 /* RegisterFieldsLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D48C34E21EE098E00D0E097 /* RegisterFieldsLogic.swift */; };
@@ -82,7 +83,10 @@
 		8D9C7D6821E7AF2200B42B92 /* TabBarRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9C7D6721E7AF2200B42B92 /* TabBarRouter.swift */; };
 		8D9C7D6A21E7E25600B42B92 /* RegisterRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9C7D6921E7E25600B42B92 /* RegisterRouter.swift */; };
 		8D9C7D6C21E7E27300B42B92 /* RegisterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9C7D6B21E7E27300B42B92 /* RegisterPresenter.swift */; };
+		8DA83146221141AE0016BB0F /* VideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DA83144221141AE0016BB0F /* VideoCell.swift */; };
+		8DA83147221141AE0016BB0F /* VideoCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8DA83145221141AE0016BB0F /* VideoCell.xib */; };
 		8DAE8DDD21E1134000091421 /* String+Format.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAE8DDC21E1134000091421 /* String+Format.swift */; };
+		8DCF587A2210A37C00ADF218 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DCF58792210A37C00ADF218 /* GradientView.swift */; };
 		8DE84C8221D52AC000E4B18E /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8DE84C8421D52AC000E4B18E /* Localizable.strings */; };
 		8DE84C8F21D5355D00E4B18E /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE84C8E21D5355D00E4B18E /* TabBarController.swift */; };
 		8DE84C9121D5542300E4B18E /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DE84C9021D5542300E4B18E /* TabBar.swift */; };
@@ -124,6 +128,7 @@
 		8D3E281821EB84E2007C7144 /* MenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewCell.xib; sourceTree = "<group>"; };
 		8D419A8921EF5910007FC3CD /* UIViewController+NabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NabBar.swift"; sourceTree = "<group>"; };
 		8D419A8B21EF617C007FC3CD /* UserNitificationsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserNitificationsView.swift; sourceTree = "<group>"; };
+		8D426E4C220DBB2900039FAA /* UINavigationBar+Gradient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UINavigationBar+Gradient.swift"; sourceTree = "<group>"; };
 		8D48C34A21ED8FFB00D0E097 /* LoginTextFields.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTextFields.swift; sourceTree = "<group>"; };
 		8D48C34C21EDD03D00D0E097 /* FormButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormButton.swift; sourceTree = "<group>"; };
 		8D48C34E21EE098E00D0E097 /* RegisterFieldsLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterFieldsLogic.swift; sourceTree = "<group>"; };
@@ -176,7 +181,10 @@
 		8D9C7D6721E7AF2200B42B92 /* TabBarRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarRouter.swift; sourceTree = "<group>"; };
 		8D9C7D6921E7E25600B42B92 /* RegisterRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterRouter.swift; sourceTree = "<group>"; };
 		8D9C7D6B21E7E27300B42B92 /* RegisterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterPresenter.swift; sourceTree = "<group>"; };
+		8DA83144221141AE0016BB0F /* VideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoCell.swift; sourceTree = "<group>"; };
+		8DA83145221141AE0016BB0F /* VideoCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoCell.xib; sourceTree = "<group>"; };
 		8DAE8DDC21E1134000091421 /* String+Format.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Format.swift"; sourceTree = "<group>"; };
+		8DCF58792210A37C00ADF218 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		8DE84C8321D52AC000E4B18E /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8DE84C8521D5304100E4B18E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		8DE84C8621D5304100E4B18E /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
@@ -256,6 +264,7 @@
 		8D13BD0B21F0F18A0078EB66 /* About */ = {
 			isa = PBXGroup;
 			children = (
+				8DA83143221141800016BB0F /* View */,
 				8D13BD0C21F0F1B60078EB66 /* AboutController.swift */,
 				8D13BD0D21F0F1B60078EB66 /* AboutController.xib */,
 			);
@@ -311,6 +320,7 @@
 				8D7772B621E5BF2C00032FE9 /* UIImageView+Rounded.swift */,
 				8D8D51B021ECBAEB009EF6F3 /* UITextField+Placeholder.swift */,
 				8D419A8921EF5910007FC3CD /* UIViewController+NabBar.swift */,
+				8D426E4C220DBB2900039FAA /* UINavigationBar+Gradient.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -333,6 +343,7 @@
 				8D6E32F521DD3FFD00D5CFC7 /* Parsing.swift */,
 				8D6E32F721DD401A00D5CFC7 /* GetIp.swift */,
 				8D419A8B21EF617C007FC3CD /* UserNitificationsView.swift */,
+				8DCF58792210A37C00ADF218 /* GradientView.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -539,6 +550,15 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		8DA83143221141800016BB0F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8DA83144221141AE0016BB0F /* VideoCell.swift */,
+				8DA83145221141AE0016BB0F /* VideoCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		8DE84C7B21D4F11000E4B18E /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -665,6 +685,7 @@
 				8D7164FC220475B90052A710 /* PopupController.xib in Resources */,
 				8D87B40F21DBAF6200F2FCFD /* RegisterController.xib in Resources */,
 				8D13BD0F21F0F1B60078EB66 /* AboutController.xib in Resources */,
+				8DA83147221141AE0016BB0F /* VideoCell.xib in Resources */,
 				8D91B1EA21D368C400CAC478 /* Main.storyboard in Resources */,
 				8D9C7D6421E6669300B42B92 /* HistoryHeader.xib in Resources */,
 				8D3E281A21EB84E2007C7144 /* MenuViewCell.xib in Resources */,
@@ -750,6 +771,7 @@
 				8DEE6D5B21F8390A0039B1B0 /* RootResponseModel.swift in Sources */,
 				8D13BD0E21F0F1B60078EB66 /* AboutController.swift in Sources */,
 				8D2D7ED621EBBCA200B5E34A /* RegisterField.swift in Sources */,
+				8D426E4D220DBB2900039FAA /* UINavigationBar+Gradient.swift in Sources */,
 				8D7772B721E5BF2C00032FE9 /* UIImageView+Rounded.swift in Sources */,
 				8D9C7D6321E6669300B42B92 /* HistoryHeader.swift in Sources */,
 				8D419A8A21EF5910007FC3CD /* UIViewController+NabBar.swift in Sources */,
@@ -777,6 +799,7 @@
 				8DE84C9121D5542300E4B18E /* TabBar.swift in Sources */,
 				8D87B41721DBCAE800F2FCFD /* GradientViewController.swift in Sources */,
 				8D61659B21D6A6AD00101F22 /* CardView.swift in Sources */,
+				8DCF587A2210A37C00ADF218 /* GradientView.swift in Sources */,
 				8DEE6D6321F8526F0039B1B0 /* TransferPresenter.swift in Sources */,
 				8D8B2DE521DFD28A007B6F13 /* HandleRequest.swift in Sources */,
 				8D419A8C21EF617C007FC3CD /* UserNitificationsView.swift in Sources */,
@@ -790,6 +813,7 @@
 				8D87B3FB21D79AA200F2FCFD /* MainInteractor.swift in Sources */,
 				8DAE8DDD21E1134000091421 /* String+Format.swift in Sources */,
 				8D87B3F521D7982F00F2FCFD /* TransferController.swift in Sources */,
+				8DA83146221141AE0016BB0F /* VideoCell.swift in Sources */,
 				8D87B40921DB871700F2FCFD /* UITextField+Icon.swift in Sources */,
 				8D6E32F621DD3FFD00D5CFC7 /* Parsing.swift in Sources */,
 				8D61659621D68B9400101F22 /* Constants.swift in Sources */,

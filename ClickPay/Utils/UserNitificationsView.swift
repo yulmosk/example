@@ -18,11 +18,11 @@ final class UserNotificationsView: UIControl {
     
     private let labelCounter: UILabel = {
         let label = UILabel.init()
-        label.text = "0"
+        //label.text = "0"
         label.font = UIFont.boldSystemFont(ofSize: 10)
         label.textAlignment = .center
         label.textColor = UIColor.white
-        label.backgroundColor = UIColor.secondary()
+        label.backgroundColor = UIColor.point()
         label.clipsToBounds = true
         label.isHidden = true
         
@@ -40,7 +40,7 @@ final class UserNotificationsView: UIControl {
     }
     
     public func setNotificationsCount(_ count: Int32, animated: Bool = false) {
-        labelCounter.text = "\(count)"
+        //labelCounter.text = "\(count)"
         
         let hidden = count <= 0
         
@@ -74,9 +74,10 @@ final class UserNotificationsView: UIControl {
         imageView.frame = self.bounds
         
         var rect = labelCounter.frame
-        rect.size.width = 18
-        rect.size.height = 18
-        rect.origin.x = self.bounds.width - rect.size.width
+        rect.size.width = 5 //18
+        rect.size.height = 5 //18
+        rect.origin.x = self.bounds.width - 12 //rect.size.width
+        rect.origin.y = 9
         labelCounter.frame = rect
         labelCounter.layer.cornerRadius = rect.width / 2
     }

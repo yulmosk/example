@@ -25,7 +25,7 @@ class HistoryController: GradientViewController {
         showNavbarLogo(true)
         tableView.tableFooterView = UIView()
         tableView.sectionFooterHeight = 0.0
-        showCardBarItem(true)
+        //showCardBarItem(true)
         // Регистрация xib
         let headerNib = UINib.init(nibName: headerNibName, bundle: nil)
         tableView.register(headerNib, forHeaderFooterViewReuseIdentifier: headerNibName)

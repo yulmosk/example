@@ -85,7 +85,7 @@ extension TransferController {
 extension TransferController: WKNavigationDelegate {
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation) {
         showActivityIndicator(false)
-    }
+      }
     
     
     func webView(
@@ -93,6 +93,7 @@ extension TransferController: WKNavigationDelegate {
         decidePolicyFor navigationAction: WKNavigationAction,
         decisionHandler: @escaping (WKNavigationActionPolicy) -> Void)
     {
+        print("Navigation Action")
         let decision = handleRequest(request: navigationAction.request)
         if decision == .allow {
             showActivityIndicator(true)

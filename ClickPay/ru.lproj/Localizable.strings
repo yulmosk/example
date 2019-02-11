@@ -29,8 +29,22 @@
 "Popup.Action.Ok" = "Хорошо";
 "Popup.Action.Sorry" = "I'm Sorry...";
 
-"Menu.About" = "О ПРОЕКТЕ";
+"Menu.About" = "ГИД ПОЛЬЗОВАТЕЛЯ";
 "Menu.Cards" = "КАРТЫ";
 "Menu.Security" = "БЕЗОПАСНОСТЬ";
 "Menu.Contact" = "КОНТАКТ";
 "Menu.Settings" = "НАСТРОЙКИ";
+
+"Video.Title.0" = "Перевод с карты на карту";
+"Video.Title.1" = "Регистрация на www.moneysend.mastercard.md";
+"Video.Title.2" = "Перевод с использованием номера мобильного телефона получателя";
+"Video.Title.3" = "Получить деньги, отправленные мне по номеру моего мобильного телефона";
+"Video.Title.4" = "Перевод с использованием адреса е-майл получателя";
+"Video.Title.5" = "Получить деньги, отправленные мне по моему адресу е-майл";
+
+"Video.Code.0" = "HX4VE7s3t_c";
+"Video.Code.1" = "jqbD2T0_j1I";
+"Video.Code.2" = "B27b64bfvL4";
+"Video.Code.3" = "eJd5Mnn6ePs";
+"Video.Code.4" = "uvRuE4eedCQ";
+"Video.Code.5" = "oMvmZqdmPcg";
