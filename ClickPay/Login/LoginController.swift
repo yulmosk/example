@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LoginController: UIViewController {
+class LoginController: FormController {
     
     var presenter: LoginPresenter?
     var tabIndex = 0
@@ -30,7 +30,13 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        loginFieldsSetUp()
+        loginFieldsSetUp { [weak self] shift in
+            if var insets = self?.scrollView.contentInset, let viewHeigh = self?.view.bounds.height {
+                insets.bottom = viewHeigh - shift
+                self?.scrollView.contentInset = insets
+                self?.scrollView.scrollIndicatorInsets = insets
+            }
+        }
     }
     
         

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class RegisterController: UIViewController {
+class RegisterController: FormController {
     @IBOutlet weak var scrollView: UIScrollView!
     
     @IBOutlet weak var nameField: RegisterField!
@@ -24,7 +24,7 @@ class RegisterController: UIViewController {
     
     var presenter: RegisterPresenter?
     var tabIndex = 0
-    var fields = [UITextField]()
+   
 
     let controllerNibName = "RegisterController"
     init() {
@@ -36,7 +36,14 @@ class RegisterController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        registerFieldsSetUp()
+        
+        registerFieldsSetUp { [weak self] shift in
+            if var insets = self?.scrollView.contentInset, let viewHeigh = self?.view.bounds.height {
+                insets.bottom = viewHeigh - shift
+                self?.scrollView.contentInset = insets
+                self?.scrollView.scrollIndicatorInsets = insets
+            }
+        }
     }
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

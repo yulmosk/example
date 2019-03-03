@@ -93,10 +93,9 @@ extension TransferController: WKNavigationDelegate {
         decidePolicyFor navigationAction: WKNavigationAction,
         decisionHandler: @escaping (WKNavigationActionPolicy) -> Void)
     {
-        print("Navigation Action")
         let decision = handleRequest(request: navigationAction.request)
         if decision == .allow {
-            showActivityIndicator(true)
+            //showActivityIndicator(true)
         }
         
         decisionHandler(decision)

@@ -24,7 +24,7 @@ extension P2P_RequestMob: SoapOperation {
             attributes: [String : String])
             -> Bool
         {
-            return tag == "Не важно"
+            return tag == "Для этой операции не важно"
         }
     }
 }

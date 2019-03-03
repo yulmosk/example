@@ -18,7 +18,6 @@ public struct Request {
         self.host = host
         
         let name = operation.operationTitle()
-        print("Это имя операции!!!!: \(name)")
         let document = AEXMLDocument()
         
         let attributes = [
@@ -48,7 +47,6 @@ public struct Request {
             )
         }
         self.envelope = document.xmlCompact
-        print("Это xml")
         print(self.envelope)
         
         self.headers = [

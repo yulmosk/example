@@ -38,12 +38,6 @@ class AboutController: UIViewController {
     }
 }
 
-
-extension AboutController{
-    
-}
-
-
 extension AboutController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

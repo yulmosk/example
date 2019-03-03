@@ -28,6 +28,8 @@
 		8D13BD2221F1E6D40078EB66 /* SettingsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D13BD2021F1E6D40078EB66 /* SettingsController.swift */; };
 		8D13BD2321F1E6D40078EB66 /* SettingsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D13BD2121F1E6D40078EB66 /* SettingsController.xib */; };
 		8D2D7ED621EBBCA200B5E34A /* RegisterField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D2D7ED521EBBCA200B5E34A /* RegisterField.swift */; };
+		8D3CC7C0222C58DD00DD2DCB /* UIViewController+KeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3CC7BF222C58DD00DD2DCB /* UIViewController+KeyBoard.swift */; };
+		8D3CC7C2222C634600DD2DCB /* FormController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3CC7C1222C634600DD2DCB /* FormController.swift */; };
 		8D3E281921EB84E2007C7144 /* MenuViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D3E281721EB84E2007C7144 /* MenuViewCell.swift */; };
 		8D3E281A21EB84E2007C7144 /* MenuViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8D3E281821EB84E2007C7144 /* MenuViewCell.xib */; };
 		8D419A8A21EF5910007FC3CD /* UIViewController+NabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D419A8921EF5910007FC3CD /* UIViewController+NabBar.swift */; };
@@ -124,6 +126,8 @@
 		8D13BD2021F1E6D40078EB66 /* SettingsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsController.swift; sourceTree = "<group>"; };
 		8D13BD2121F1E6D40078EB66 /* SettingsController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SettingsController.xib; sourceTree = "<group>"; };
 		8D2D7ED521EBBCA200B5E34A /* RegisterField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterField.swift; sourceTree = "<group>"; };
+		8D3CC7BF222C58DD00DD2DCB /* UIViewController+KeyBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+KeyBoard.swift"; sourceTree = "<group>"; };
+		8D3CC7C1222C634600DD2DCB /* FormController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormController.swift; sourceTree = "<group>"; };
 		8D3E281721EB84E2007C7144 /* MenuViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewCell.swift; sourceTree = "<group>"; };
 		8D3E281821EB84E2007C7144 /* MenuViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewCell.xib; sourceTree = "<group>"; };
 		8D419A8921EF5910007FC3CD /* UIViewController+NabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+NabBar.swift"; sourceTree = "<group>"; };
@@ -240,6 +244,7 @@
 			children = (
 				8D13BCFB21F07AE30078EB66 /* Auth.swift */,
 				8D13BCFD21F07B190078EB66 /* BaseController.swift */,
+				8D3CC7C1222C634600DD2DCB /* FormController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -321,6 +326,7 @@
 				8D8D51B021ECBAEB009EF6F3 /* UITextField+Placeholder.swift */,
 				8D419A8921EF5910007FC3CD /* UIViewController+NabBar.swift */,
 				8D426E4C220DBB2900039FAA /* UINavigationBar+Gradient.swift */,
+				8D3CC7BF222C58DD00DD2DCB /* UIViewController+KeyBoard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -753,7 +759,9 @@
 				8D91B1E721D368C400CAC478 /* YourCabinetController.swift in Sources */,
 				8D6E32F121DCA6F200D5CFC7 /* UIViewController+SSL.swift in Sources */,
 				8D0325D921E5118F001B6979 /* UIViewController+PopUps.swift in Sources */,
+				8D3CC7C0222C58DD00DD2DCB /* UIViewController+KeyBoard.swift in Sources */,
 				8DEE6D6521F852AB0039B1B0 /* TransferInteractor.swift in Sources */,
+				8D3CC7C2222C634600DD2DCB /* FormController.swift in Sources */,
 				8D87B3F921D799E500F2FCFD /* MainPresenter.swift in Sources */,
 				8DE84C8F21D5355D00E4B18E /* TabBarController.swift in Sources */,
 				8D87B41521DBB2F200F2FCFD /* LoginPresenter.swift in Sources */,
